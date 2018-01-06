@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>binary tree zigzag traversal</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Binary Tree ZigZag traversal"/>
+<link rel="canonical" href="http://java-questions.com/binary-tree-zigzag-traversal.html"/>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+</script><link href="css/prism.css" rel="stylesheet"/><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async defer></script>
+<script type="text/javascript" src="js/prism.js" async="async"></script></head><body><nav class="navbar navbar-inverse">
+<div class="container-fluid"><div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+`<span class="icon-bar"></span>
+<span class="icon-bar"></span></button>
+<a class="navbar-brand" href="/">Java Interview questions</a></div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav"><li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Java Interview<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>   
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Jsp Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>  
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming Interview <span class="caret"></span></a><ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"><li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li><li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li><li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li> </ul></li><li><a href="data-structures-in-details.html">Data Structures</a></li><li><a href="java-articles.html">Java-Articles</a></li><li><a href="java-books.html">Books</a></li>   
+</ul></div></div></nav>
+<div class="container-fluid main">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
+<ul class="nav nav-sidebar">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li>
+<li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
+</ul></div>
+<div class="col-sm-6 col-md-6">
+<h1>Given a binary tree, return the zigzag level order traversal of its nodes' values.</h1>
+<p>(ie. from left to right, then right to left for the next level and alternate between).</p>
+ 
+<div>For example: Given binary tree <code>[3,9,20,null,null,15,7]</code>
+<pre>
+     5
+   /  \
+  3    20
+       / \
+      7   8
+returns zig-zag order
+[
+  [3],
+  [20,9],
+  [15,7]
+]
+</pre>
+<p>The problem can be solved using BFS traversal. Start traversing the tree and move elements in a stack level by level. For each level insert into a list and depending on the level, have a flag to insert from start or end of the list.</p>
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="6388864415"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+
+<pre><code class="language-java"> public class Solution { 
+ public List&lt;List&lt;Integer&gt;&gt; zigzagLevelOrder(TreeNode root) {
+	List&lt;List&lt;Integer&gt;&gt; list = new ArrayList&lt;List&lt;Integer&gt;&gt;();
+	if (root == null)
+		return list;
+
+	Queue&lt;TreeNode&gt; stack = new LinkedList();
+	stack.add(root);
+	int count = 1;
+	boolean leftToRight = true;
+	while (!stack.isEmpty()) {
+		int futureCount = 0;
+		LinkedList&lt;Integer&gt; l = new LinkedList&lt;Integer&gt;();
+		while (count > 0) {
+			TreeNode t = stack.poll();
+			if (leftToRight) {
+				l.add(t.val);
+			} else {
+				l.addFirst(t.val);
+			}
+			if (t.left != null) {
+				stack.add(t.left);
+				futureCount++;
+			}
+			if (t.right != null) {
+				stack.add(t.right);
+				futureCount++;
+			}
+			count--;
+		}
+		count = futureCount;
+		list.add(l);
+		leftToRight = !leftToRight;
+	}
+	return list;
+}
+
+static class TreeNode {
+	TreeNode left;
+	TreeNode right;
+	int val;
+
+	public TreeNode(int value) {
+		this.val = value;
+	}
+}}</pre></code>
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'java-questions';
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div> <!-- dashboard -->
+<div class="col-sm-3 col-md-4">
+<div class="fb-like-box" data-href="https://www.facebook.com/InterviewQuestionsForProgrammers" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+<div style="margin: 5px; float: center;">  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop1 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="3435398011"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop2 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="4912131216"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>  </div></div><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-23729980-1', 'auto');
+ga('send', 'pageview');
+</script><footer style="background-color: #3c3d41;padding: 30px 30px;color: rgba(255,255,255,1.00);margin-bottom: 20px;border-bottom-right-radius: 6px;border-top-left-radius: 0px;border-bottom-left-radius: 6px;">
+<div class="row">
+<h4>Recommend Reading</h4>
+<div class="col-md-6">
+<ul class="pages">
+<li><a href="java-memory-model-and-garbage-clilections.html">How java manages Memory?</a></li>
+<li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li>
+<li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li>
+<li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference betwen equals and ==?</a></li>
+<li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
+<li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li>
+<li><a href="java-immutable-class.html">Why is it recommended to ues Immutable objects in Java</a></li>
+</ul>
+<p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
+</div>
+<div class="col-md-5 animated fadeInRight">
+<h3>Subscribe to get latest updates.</h3>
+<form action="//java-questions.us5.list-manage.com/subscribe/post?u=eef8f08d0222ba841685ce4e2&amp;id=3670638f6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div id="mc_embed_signup_scroll">
+<div class="mc-field-group">
+<label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);">
+</div>
+<div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div>
+</form></div></p></div></div></footer></body></html>

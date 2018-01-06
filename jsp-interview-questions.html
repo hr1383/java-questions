@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>JSP interview questions</title>
+<meta name="keywords" content="jsp interview questions, j2ee interview questions, jsp questions"/>
+<meta name="description" content="JSP interview questions and answers asked in various J2EE interview and focus on view part of MVC framework."/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/><link rel="alternate" href="http://java-questions.com" hreflang="en-us"/>
+<link rel="canonical" href="https://java-questions.com/jsp-interview-questions.html"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link href="css/prism.css" rel="stylesheet"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script>
+<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<body>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid"><div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button>
+<a class="navbar-brand" href="/">Java Interview questions</a></div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav"><li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Java Interview<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>   
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Jsp Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>  
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"><li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li><li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li><li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li></ul></li><li><a href="data-structures-in-details.html">Data Structures</a></li><li><a href="java-articles.html">Java-Articles</a></li><li><a href="java-books.html">Books</a></li>
+</ul></div><!--/.nav-collapse --></div><!--/.container-fluid --></nav>
+<div class="container-fluid main">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
+<ul class="nav nav-sidebar">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"> <b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
+</ul></div>
+<div class="col-sm-6 col-md-6">
+<h1>JSP servlet questions</h1>
+<div><p><strong>Q1) What does JSP stands?</strong> </p>
+<p> Ans) JSP (Java ServerPages) is an extension of the Java Servlet technology. JSP is commonly used as the presentation layer for combining HTML and Java code. While Java Servlet technology is capable of generating HTML with use of PrintWriter class. This process of embedding HTML code with escape characters is cumbersome and hard to maintain. The JSP technology solves this by providing a level of abstraction so that the developer can use custom tags and action elements, which can speed up Web development and are easier to maintain. </p>
+<p>The JSPs have a translation or a compilation process where the JSP engine translates and compiles a JSP file into a JSP Servlet. The translated and compiled JSP Servlet moves to the execution phase (runtime) where they can handle requests and send responses.
+Unless explicitly compiled ahead of time, JSP files are compiled the first time they are accessed. On large production sites, or in situations involving complicated JSP files, compilation may cause unacceptable delays to users first accessing the JSP page. The JSPs can be compiled ahead of time (ie precompiled) using application server tools/settings or by writing your own script.</p>
+</div>
+<div><p><strong>Q2) Explain the life cycle methods of a JSP?</strong></p>
+<p><ul><li><b>Pre-translated:</b> Before the JSP file has been translated and compiled into the Servlet.</li>
+<li><strong> Translated: </strong>The JSP file has been translated and compiled as a Servlet.</li>
+<li><strong> Initialized:</strong> Prior to handling the requests in the service method, the container calls the jspInit() to initialize the <strong>Servlet. </strong>It is called only once per Servlet instance.</li>
+<li><strong>Servicing:</strong> Services the client requests. The container calls this method for each request.</li>
+<li><strong>Out of service:</strong> The Servlet instance is out of service. The container calls the jspDestroy() method.</li></ul>
+</p></div>
+<div><strong>Q3) What are the different type of scripting elements?</strong>
+<p>Ans)<strong>Declaration Element</strong>: is the embedded Java declaration statement, which gets inserted at the Servlet class level.</p>
+<pre><code class="language-java"><%! Calendar c = Calendar.getInstance(); %></code></pre>
+<p>Important: declaring variables via this style is not thread-safe because this variable ends up in the generated Servlet as an instance variable, not within the body of the _jspservice() method. Ensure their access is either read-only or synchronized.</p>
+<p><strong>Expression Element:</strong> is the embedded Java expression, which gets evaluated by the service method.</p>
+<pre><code class="language-java"><%= new Date()%></code></pre>
+<strong>Scriptlet Element</strong>: are the embedded Java statements, which get executed as part of the service method.
+(Note: Not recommended to use Scriptlet elements because they don't provide reusability and maintainability. Use custom tags (like JSTL, JSF tags, etc) or beans instead).
+<pre><code class="language-java"><%
+//Java code
+String userName=null;
+userName=request.getParameter("userName");
+%></code></pre>
+<strong>Action Element</strong>: A JSP element that provides information for execution phase.
+<p><jsp:useBean id="object_name" class="class_name"/></jsp:useBean>
+ <jsp:include page="scripts/login.jsp">
+ </jsp:include>
+</p>
+<strong>Directive Element</strong>: A JSP element that provides global information for the translation phase.
+<pre><code class="language-java"><%@ page import='java.util.Date'%>
+<%@ include file=?myJSP %>
+<%@ taglib uri=?tagliburi prefix="myTag"%></code></pre>
+</div>
+<div><p><strong>Q4) What are the different scope values or what are the different scope values for "jsp:usebean"?</strong></p>
+<table class="table"> 
+<tr><td>Scope</td><td>Object</td><td>Comment</td></tr>
+<tr><td>Page</td><td>PageContext</td><td>Available to the handling JSP page only.</td></tr>
+<tr><td>Request</td><td>Request</td><td>Available to the handling JSP page or Servlet and forwarded JSP page or Servlet.</td></tr>
+<tr><td>Session</td><td>Session</td><td>Available to any JSP Page or Servlet within the same session.</td></tr>
+<tr><td>Application</td>
+<td>Application</td><td>Available to all the JSP pages and Servlets within the same Web Application.</td></tr></table>
+</div>
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-4267874373737812"
+     data-ad-slot="6388864415"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div><p><strong>Q5) What are the differences between static and a dynamic include?</strong></p>
+<p><table class="table">
+<tr><td>Static include</td><td>Dynamic include</td></tr>
+<tr><td>During the translation or compilation phase all the included JSP pages are compiled into a single Servlet.</td><td>The dynamically included JSP is compiled into a separate Servlet. It is a separate resource, which gets to process the request, and the content generated by this resource is included in the JSP response.</td></tr>
+<tr><td>No run time performance overhead.<td>Has run time performance overhead.</tr></table>
+</div>
+<div><p><strong>Q6) Is a JSP variable declaration thread safe?</strong></p>
+<p>Ans) <strong>No.</strong> The declaration of variables in JSP is not thread-safe because the declared variables end up in the generated Servlet as an instance variable, not within the body of the _jspservice() method. The following declaration is not thread safe: because these are declarations, and will only be evaluated once when the page is loaded 
+<p>&lt;%&#33 int a = 5 %&gt;</p>
+The following declaration is thread safe: because the variables declared inside the scriplets have the local scope and not shared.
+<p>&lt;% int a = 5 % &gt;;</p></p>
+</div>
+<div><p><strong>Q7) Explain JSP URL mapping? What is URL hiding or protecting the JSP page? </strong></p>
+<p>Ans) The JSP resources usually reside directly or under subdirectories (e.g. myPath) of the
+document root, which are directly accessible to the user through the URL. If you want to protect your Web
+resources then hiding the JSP files behind the WEB-INF directory can protect the JSP files, css (cascading style sheets) files, Java Script files, pdf files, image files, html files etc from direct access. The request should be made to a servlet who is responsible for authenticating and authorising the user before returning the protected JSP page or its resources.</p>
+</div>
+<div><p><strong>Q8) What are custom tags? Explain how to build custom tags?</strong></p>
+<p>Ans) Custom JSP tag is a tag you define. You define how a tag, its attributes and its body are interpreted, and then group your tags into collections called tag libraries that can be used in any number of JSP files. So basically it is a reusable and extensible JSP only solution. The pre-built tags also can speed up Web development.</p>
+<p><strong>Step 1</strong>
+<strong>Create a Custom tag class using only doStartTag()</strong>
+<pre><code class="language-java">public class MyTag extends TagSupport {
+  int attr = null;
+  public int setAttr(int a ttr){this.attr = a ttr}
+  public int getAttr(){return attr;}
+  public int doStartTag() throws JspException {
+    .......
+    return 0;
+  }
+  public void release(){
+    .....
+  }
+}</code></pre></p>
+<p><strong> Step 2</strong>
+<strong>The Tag library descriptor file (*.tld) maps the XML element names to the tag implementations. The code sample
+MyTagDesc.tld is shown below:</strong></p>
+<pre><code class="language-java">&lt;taglib&gt;
+&lt;tag&gt;
+&lt;name&gt;tag1&lt;/name&gt;
+&lt;tagclass&gt;myTagPkg.MyTag&lt;/tagclass&gt;
+&lt;bodycontent&gt;empty&lt;/bodycontent&gt;
+&lt;attribute&gt;
+&lt;name&gt;attr&lt;/name&gt;
+&lt;required&gt;false&lt;/required&gt;
+&lt;rtexprvalue&gt;false&lt;/rtexprvalue&gt;
+&lt;/attribute&gt;
+&lt;/tag&gt;
+&lt;/taglib&gt;</code></pre>
+<p><strong> Step 3</strong>
+The web.xml deployment descriptor maps the URI to the location of the *.tld (Tag Library Descriptor) file. The code
+sample web.xml file is shown below:</p>
+<pre><code class="language-java">&lt;web-app&gt;
+&lt;taglib&gt;
+  &lt;taglib-uri&gt;/WEB-INF/MyTagURI &lt;/taglib-uri&gt;
+  &lt;taglib-location>
+      /WEB-INF/tags/MyTagDesc.tld
+  &lt;/taglib-location&gt;
+ &lt;/taglib&gt;
+&lt;/web-app&gt;</code></pre>
+<strong>STEP: 4</strong>
+<p>
+The JSP file declares and then uses the tag library as shown below:</p>
+<pre><code class="language-java">&lt;@ taglib uri="/WEB-INF/ MyTagURI" prefix="myTag" %&gt;
+&lt;myTag:tag1 attr="abc" /&gt;
+&lt;taglib&gt;
+&lt;tag&gt;
+&lt;name&gt;tag1&lt;/name&gt;
+&lt;tagclass&gt;myTagPkg.MyTag&lt;/tagclass&gt;
+&lt;bodycontent&gt;empty&lt;/bodycontent&gt;
+&lt;attribute&gt;
+&lt;name&gt;attr&lt;/name&gt;
+&lt;required&gt;false&lt;/required&gt;
+&lt;rtexprvalue&gt;false&lt;/rtexprvalue&gt;
+&lt;/attribute&gt;
+&lt;/tag&gt;
+&lt;/taglib&gt;</code></pre>
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'java-questions';
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>		          
+</div>
+<div class="col-sm-3 col-md-4">
+<div class="fb-like-box" data-href="https://www.facebook.com/InterviewQuestionsForProgrammers" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+<div style="margin: 5px; float: center;">  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- right top 1 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:120px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="7954940046"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script> </div><div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- left bottom text&display -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="5240522018"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div></div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-23729980-1', 'auto');
+ga('send', 'pageview');
+</script><footer style="background-color: #3c3d41;padding: 30px 30px;color: rgba(255,255,255,1.00);margin-bottom: 20px;border-bottom-right-radius: 6px;border-top-left-radius: 0px;border-bottom-left-radius: 6px;">
+<div class="row"><h4>Recommend Reading</h4><div class="col-md-6">
+<ul class="pages"><li><a href="java-memory-model-and-garbage-clilections.html">How java manages Memory?</a></li><li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li><li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li><li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="java-8-lambda-expressions.html">Lambdas in Java8</a></li><li><a href="java-concurrenthashmap.html">How Concurrent HashMap Works?</a></li><li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li><li><a href="log-structured-merge-trees.html">Log Structured Merge Trees</a></li></ul><p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
+</div><div class="col-md-5 animated fadeInRight"><h3>Subscribe to get latest updates.</h3><form action="//java-questions.us5.list-manage.com/subscribe/post?u=eef8f08d0222ba841685ce4e2&amp;id=3670638f6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><div id="mc_embed_signup_scroll"><div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);"></div><div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div></form></div></p></div></div></footer></body></html>

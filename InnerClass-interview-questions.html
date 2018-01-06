@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head>
+<title>InnerClass Java interview questions | Java interview questions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta name="description" content="Inner class is a class defined inside other class and act like a member of the enclosing class."/>
+<link rel="canonical" href="http://java-questions.com/InnerClass-interview-questions.html"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link href="css/prism.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async defer></script>
+<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<body>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid"><div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button>
+<a class="navbar-brand" href="/">Java Interview questions</a></div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav"><li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Java Interview<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>   
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Jsp Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>  
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li> 
+</ul></li>
+<li><a href="data-structures-in-details.html">Data Structures</a></li>
+<li><a href="java-articles.html">Java-Articles</a></li><li><a href="java-books.html">Books</a></li>  
+</ul></div><!--/.nav-collapse --></div><!--/.container-fluid --></nav>
+<div class="container-fluid main">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
+<ul class="nav nav-sidebar">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
+</ul>
+</div>
+<div class="col-sm-6 col-md-6">
+<h1>Java concepts on Innerclass</h1>     
+<div><strong><p>Q1) What is an inner class?</p></strong>
+<p>Ans) Inner class is a class defined inside other class and act like a member of the enclosing class.</p>
+</div>
+<div><p><strong>Q2) What are the different types of inner classes?</strong></p>
+<p>Ans) There are two main types of inner classes &ndash;</p>	
+<ul><li>Static member class</li>
+<li>Inner class
+<ul><li>Member class</li>
+<li>Anonymous class</li>
+<li>Local class</li>
+</ul></li></ul>
+</div>
+<div><p><strong>Q3) What is static member class?</strong></p>
+<p>Ans) A static member class behaves much like an ordinary top-level class, except that it can access the static members of the class that contains it. The static nested class can be accessed as the other static members of the enclosing class without having an instance of the outer class.  The static class can contain non-static and static members and methods.</p>
+<pre><code class="language-java">public class InnerClass { 
+ 	static class StaticInner { 
+ 		static int <em>i</em> = 9; 
+		int no = 6; 
+		private void method() {} 
+		public void method1() {} 
+		static void method2() {} 
+		final void method3() {} 
+ 	} 
+}</code></pre>
+<p>The static inner class can be accessed from Outer Class in the following manner:</p>
+<pre><code class="language-java">InnerClass.StaticInner staticObj= new InnerClass. StaticInner ();</code></pre>
+<p>No outer class instance is required to instantiate the nested static class because the static class is a static member of the enclosing class.</p>
+</div>
+<div>
+<p><strong>Q4) What are non static inner classes?</strong></p>
+<p>Ans) The different type of static inner classes are:
+Non - static inner classes &ndash; classes associated with the object of the enclosing class.</p>
+<p><strong>Member class</strong> - Classes declared outside a function (hence a &quot;member&quot;) and not  declared &quot;static&quot;.<br/>
+The member class can be declared as public, private,  protected, final and abstract. E.g.
+</p>
+<pre><code class="language-java">public class InnerClass { 
+	class MemberClass {
+		public void  method1() { } 
+	} 
+}</code></pre>
+<p><strong>Method local class</strong> &ndash; The inner class declared inside the method is called method local inner class. Method local inner class can only be declared as final or abstract. Method local class can only access global variables or  method local variables if declared as final</p>
+<pre><code class="language-java">public class InnerClass {
+	int i = 9; 
+	public void method1() {
+		final int k = 6; 
+		class MethodLocal { 
+		  MethodLocal() { 
+			System.out.println(k  + i); 
+		  } 
+		} 
+	} 
+}</code></pre>
+<p><strong>Anonymous inner class</strong> - These are local classes which are automatically declared and  instantiated in the middle of an expression. Also, like local classes, anonymous classes  cannot be public, private, protected, or static. They can specify arguments to  the constructor of the superclass, but cannot otherwise have a constructor. They  can implement only one interface or extend a class.<br/>
+Anonymous class cannot define any static fields, methods,  or classes, except for static final constants.<br/>
+Also, like local classes, anonymous classes cannot be  public, private, protected, or static</p>
+<p>Some examples:<br/>
+<pre><code class="language-java">public class MyFrame extends JFrame { 
+	JButton btn = new JButton(); 
+	MyFrame() { 
+		btn.addActionListener(new  ActionListener() { 
+			public void  actionPerformed(ActionEvent e) {} 
+		}); 
+	} 
+}
+//Anonymous class used with comparator 
+List&lt;Parent&gt; l = new ArrayList&lt;Parent&gt;(); 
+l.add(new Parent(2)); 
+l.add(new Parent(3)); 
+Collections.sort(l, new Comparator() { 
+	public int compare(Object o1,  Object o2) { 
+		Parent prt1 = (Parent) o1; 
+		Parent prt2 = (Parent) o2; 
+		if (prt1.getAge() &gt;  prt2.getAge()) { 
+			return -1; 
+		}else if(prt1.getAge()&lt;prt2.getAge())  { 
+			return 1; 
+		} else { 
+			return 0; 
+		} 
+	} 
+});</code></pre>
+</div>
+<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-middle -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="6388864415"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div> 
+<div><p><strong>Q5)Can a static nested class have access to the enclosing class non-static methods or instance variables?</strong></p>
+<p>Ans) No .</p></div>
+<div><p><strong>Q6)What are the advantages of Inner classes?</strong></p>
+<p> Ans) The embedding of inner class into the outer class in the case when the inner class is to be used only by one class i.e. the outer class makes the package more streamlined. Nesting the inner class code where it is used (inside the outer class) makes the code more readable and maintainable.</p>
+<p> The inner class shares a special relationship with the outer class i.e. the inner class has access to all members of the outer class and still have its own type is the main advantages of Inner class. Advantage of inner class is that they can be hidden from the other classes in the same package and still have the access to all the members (private also) of the enclosing class. So the outer class members which are going to be used by the inner class can be made private and the inner class members can be hidden from the classes in the same package. This increases the level of
+encapsulation.
+</p>
+<p> If a class A is written requires another class B for its own use, there are two ways to do this. One way is to write a separate class B or to write an inner class B inside class A. Advantage of writing the inner class B in the class A is you can avoid having a separate class. Inner classes are best used in the event handling mechanism and to implement the helper classes. The advantage of using inner class for event handling mechanism is that the use of if/else to select the component to be handled can be avoided. If inner classes are used each component gets its own
+event handler and each event handler implicitly knows the component it is working for.</p>
+</div>
+<div>
+<p><strong>Q7)What are disadvantages of using inner classes?</strong></p>
+<p>	Ans)
+<ul><li> Using inner class increases the total number of classes being used by the application. For all the classes created by JVM and loaded in the memory, jvm has to perform some tasks like creating the object of type class. Jvm may have to perform some routine tasks for these extra classes created which may result slower performance if the application is using more number of inner classes.</li>
+<li>Inner classes get limited support of ide/tools as compared to the top level classes, so working with the inner classes is sometimes annoying for the developer.</li>
+</p>
+</div>
+<div><p><strong>Q8) What are different types of anonymous classes?</strong></p>
+<p>Ans 1)
+<strong>Plain old anonymous class type one</strong>&ndash;
+<pre><code class="language-java">class superClass{
+	void doSomething() {
+	  System.out.println(&ldquo;Doing something in the Super class&rdquo;);
+	}
+}
+class hasAnonymous{
+	superClass anon = new superClass(){
+	void doSomething() {
+	  System.out.println(&ldquo;Doing something in the Anonymous class&rdquo;);
+	}
+};</code></pre>
+<p>Here anon is the reference which is of type superClass which is the class extended by the anonymous class i.e. superclass of the anonymous class. The method doSomething() is the super class method overridden by the anonymous class.</p>
+<p><strong>Plain old anonymous class type two</strong> &ndash;</p>
+<pre><code class="language-java">interface Eatable {
+  public void prepareSweets();
+}
+class serveMeal {
+	Eatable food = new Eatable(){
+	public void
+		prepareSweets(){ //come implementation code goes here }
+	};
+}</code></pre>
+<p>food is reference variable of type Eatable interface which
+refers to the anonymous class which is the implementer of the
+interface Eatable. The anonymous implementer class of the interface
+Eatable implements its method prepareSweets() inside it.</p>
+<p><strong>Argument defined anonymous class</strong> &ndash;</p>
+<pre><code class="language-java">interface Vehicle {
+	void getNoOfWheels();
+}
+class Car {
+	void getType(Vehical v) { }
+}
+class BeautifulCars {
+	void getTheBeautifilCar() {
+		Car c = new Car ();
+		c.getType (new Vehicle () {
+			public void getNoOfWheels () {
+				System.out.println(&quot;It has four wheels&quot;);
+			}
+		});
+	}
+}</code></pre>
+<p>Anonymous class is defined as the argument of the method getTheBeautifilCar(), this anonymous class is the implementer of the interface Vehicle. The method of class Car getTheBeautifilCar() expects the argument as an object of type Vehicle. So first we create an object of Car referenced by the variable &lsquo;c&rsquo;. On this object of Car we call the method getTheBeautifilCar() and in the argument we create an anonymous class in place which is the implementer of interface Vehicle hence of type Vehicle.</p>
+</div>
+<div><p><strong>Q9) If you compile a file containing inner class how many .class files are created and what are all of them accessible in usual way?</strong></p>
+<p>Ans) If a inner class enclosed with an outer class is compiled then one .class file for each inner class an a .class file for the outer class is created. e.g.
+<pre><code class="language-java">class EnclosingOuter {
+	class Inner{ }
+}</code></pre>
+<p>If you compile the above code with command</p>
+<b>% javac EnclosingOuter.java</b>
+<br/>
+<p>Two files are created will be created. Though a separate inner class file is generated, the inner class file is not accessible in the usual way.</p>
+<em><strong>EnclosingOuter.class <br/>EnclosingOuter$Inner.class</strong></em>
+</p>
+</div>
+<div><p><strong>Q10) How to access the inner class from code within the outer class?</strong></p>
+Ans) The inner class is instantiated only through the outer class instance.
+<pre><code class="language-java">class EnclosingOuter {
+	private int noInnerClass = 1;
+	public void getNoOfInnerClasses(){
+		Inner in = new Inner();
+		System.out.println("No Of Inner classes is :"+ in.getNoOfClassesFromOuter());
+	}
+class Inner{
+	public int getNoOfClassesFromOuter(){ 
+		return noInnerClass;
+	}
+}</code></pre>
+<p> Here the method getNoOfInnerClasses() is called on the outer class&rsquo;s instance through this outer class instance the inner class instance in is created.</p>
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'java-questions';
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div> <!-- dashboard -->
+<div class="col-sm-3 col-md-4">
+<div class="fb-like-box" data-href="https://www.facebook.com/InterviewQuestionsForProgrammers" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+<div style="margin: 5px; float: center;">  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop1 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="3435398011"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop2 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="4912131216"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div></div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-23729980-1', 'auto');
+ga('send', 'pageview');
+</script><footer style="background-color: #3c3d41;padding: 30px 30px;color: rgba(255,255,255,1.00);margin-bottom: 20px;border-bottom-right-radius: 6px;border-top-left-radius: 0px;border-bottom-left-radius: 6px;">
+<div class="row"><h4>Recommend Reading</h4><div class="col-md-6">
+<ul class="pages"><li><a href="java-memory-model-and-garbage-clilections.html">How java manages Memory?</a></li><li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li><li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li><li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference betwen equals and ==?</a></li><li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
+<li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li><li><a href="java-immutable-class.html">Why is it recommended to ues Immutable objects in Java</a></li>
+</ul><p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
+</div>
+<div class="col-md-5 animated fadeInRight">
+<h3>Subscribe to get latest updates.</h3>
+<form action="//java-questions.us5.list-manage.com/subscribe/post?u=eef8f08d0222ba841685ce4e2&amp;id=3670638f6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div id="mc_embed_signup_scroll">
+<div class="mc-field-group">
+<label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);">
+</div>
+<div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div>
+</form></div></p></div></div></footer></body></html>

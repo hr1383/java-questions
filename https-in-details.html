@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>How does https work?</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="how does https work and ssl works"/>
+<link rel="canonical" href="http://java-questions.com/https-in-details.html"/>
+<meta name="keywords"  content="balanced,binary tree" />
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link href="css/prism.css" rel="stylesheet"/><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async defer></script>
+<script type="text/javascript" src="js/prism.js" async="async"></script></head><body><nav class="navbar navbar-inverse">
+<div class="container-fluid"><div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+`<span class="icon-bar"></span>
+<span class="icon-bar"></span></button>
+<a class="navbar-brand" href="/">Java Interview questions</a></div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav"><li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Java Interview<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>   
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Jsp Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>  
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li> 
+</ul></li>
+<li><a href="data-structures-in-details.html">Data Structures</a></li>
+<li><a href="java-articles.html">Java-Articles</a></li>
+<li><a href="java-books.html">Books</a></li>
+</ul></div></div></nav>
+<div class="container-fluid main">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
+<ul class="nav nav-sidebar">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li>
+<li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
+</ul></div>
+<div class="col-sm-6 col-md-6">
+<h1>Describe the working of https in detail</h1>
+ 
+<div><p>We know that sending a data over the internet is like sending a box via courier with no digital lock and can be opened by anyone. (One can argue about hacking the lock but that's not the problem we are trying to solve).</p>
+<p>To send the data securely, <strong>https</strong> was invented which is nothing but <b>HTTP +SSL (Secure Socket Layer).</b> SSL uses cryptography to encrypt the text.</p>
+<strong>Let discuss the basics of cryptography.</strong>
+<ol><li><strong>Encryption</strong> - The process of converting a text to a random string is called Encryption. To convert the plain text to the random text, a key is used.</li>
+<li><strong>Key</strong> - The key is used to encrypt and decrypt the data.</li>
+<li><strong>Decryption</strong> - The process of converting a random string to text is called Decryption. To convert the random text to the plain text a key is used.</li></ol>
+<p>To encrypt the text A and decrypt back to text A the key should be common. The key is called <strong>symmetric key.</strong></p>
+<ol><li><strong>Symmetric Key:</strong> An encryption system in which the sender and receiver of a message share a single, common key that is used to encrypt and decrypt the message. Symmetric-key systems are simpler and faster, but their main drawback is that the two parties must somehow exchange the key in a secure way.</li>
+<li><strong>Asymmetric Key:</strong> The keys are simply large numbers that have been paired together but are not identical (asymmetric). One key in the pair can be shared with everyone; it is called the <strong>public key.</strong> The other key in the pair is kept secret; it is called the <strong>private key</strong>. Either of the keys can be used to encrypt a message; the opposite key from the one used to encrypt the message is used for decryption.</li></ol>
+<p>Now we are aware of the basics of cryptography, lets look into how HTTPS works.</p>
+<ul>
+  <li>When a user clicks on an https link browser makes a TCP connection on https port 443 with the server.</li>
+  <li>After a connection is successful SSL handshake starts between browser and server.</li>
+</ul>
+<p>The series of exchange between server and client can be categorized into 3 groups.</p>
+<ul>
+<li><strong><i>Hello:</i></strong> Client sends a hello message which contains details such as Highest SSL version, Ciphers algorithm it supports, Compression algorithm, Random key - this is later used to generate a symmetric key. Server responds with a hello message containing SSL version, Cipher to be used, sessionid, random data - this data will later be used in generation of key.</li>
+<li><strong>Certificate Exchange:</strong> After server hello message, the server sends a digital certificate. The certificate contains the public key assigned for the browser. The certificate also helps to set the identity of the browser with the server. The digital signature on the certificate is someone vouching for the fact that a particular public key belongs to a particular individual or organization. In order to be trusted by the average web browser, certificates have to be signed by a trusted <em>Certificate Authority</em> (CA). CAs are companies that perform manual inspection and review, to make sure that the applying entity is both:
+<ol>
+<li>a real person or business that exists in the public record</li>
+<li>in control of the domain, they're applying for a signed certificate for</li>
+</ol>
+Once the CA verifies that the applicant is real and really owns the domain, the CA will "sign" the site's certificate, essentially putting their stamp of approval on the fact that this site's public key really belongs to them and should be trusted. The browser comes preloaded with a list of trusted CAs.</li>
+<li><strong>Key Exchange:</strong> After receiving the digital certificate, the browser generates a symmetric key. It sends this key by encrypting it with the server public key. Since this message is encrypted using server public key, it can only be decrypted by its private key which only resides on the server.</li>
+</ul>
+<p>Once the symmetric key is exchanged the browser can start interacting with the server by sending encrypted messages securely.</p>
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'java-questions';
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div> <!-- dashboard -->
+<div class="col-sm-3 col-md-4">
+<div class="fb-like-box" data-href="https://www.facebook.com/InterviewQuestionsForProgrammers" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+<div style="margin: 5px; float: center;">  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop1 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="3435398011"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop2 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="4912131216"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>  </div></div><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-23729980-1', 'auto');
+ga('send', 'pageview');
+</script><footer style="background-color: #3c3d41;padding: 30px 30px;color: rgba(255,255,255,1.00);margin-bottom: 20px;border-bottom-right-radius: 6px;border-top-left-radius: 0px;border-bottom-left-radius: 6px;">
+<div class="row"><h4>Recommend Reading</h4><div class="col-md-6">
+<ul class="pages"><li><a href="java-memory-model-and-garbage-clilections.html">How java manages Memory?</a></li><li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li><li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li><li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference betwen equals and ==?</a></li><li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
+<li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li><li><a href="java-immutable-class.html">Why is it recommended to ues Immutable objects in Java</a></li>
+</ul><p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
+</div>
+<div class="col-md-5 animated fadeInRight">
+<h3>Subscribe to get latest updates.</h3>
+<form action="//java-questions.us5.list-manage.com/subscribe/post?u=eef8f08d0222ba841685ce4e2&amp;id=3670638f6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div id="mc_embed_signup_scroll">
+<div class="mc-field-group">
+<label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);">
+</div>
+<div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div>
+</form></div></p></div></div></footer></body></html>

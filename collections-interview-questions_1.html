@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Top Java programming Collections Interview Questions</title>
+<meta name="description" content="List of top 20 java collections in java interview questions."/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<link rel="canonical" href="http://java-questions.com/collections-interview-questions_1.html"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link href="css/prism.css" rel="stylesheet"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script><script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<body>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid"><div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button>
+<a class="navbar-brand" href="/">Java Interview questions</a></div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav"><li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Java Interview<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>   
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Jsp Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>  
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"><li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li><li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li><li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li> </ul></li><li><a href="data-structures-in-details.html">Data Structures</a></li><li><a href="java-articles.html">Java-Articles</a></li><li><a href="java-books.html">Books</a></li>  
+</ul></div><!--/.nav-collapse --></div><!--/.container-fluid --></nav>
+<div class="container-fluid main">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
+<ul class="nav nav-sidebar">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li>
+<li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li></ul></div>
+<div class="col-sm-6 col-md-6">
+<h1>Top Collection Java Interview Questions</h1>
+<div id=""><p><strong>Q) What data structure is used to implement HashSet?</strong> </p>
+<p>Ans) HashSet implements Hashmap internally to store the data. The data passed to hashset is stored as a key in hashmap with null as value. This can be summarized as HashMap with keys and null value is a hashset.</p></div>
+<div id=""><p><strong>Q) What is a ConcurrentHashMap? </strong></p>
+<p>Ans) A concurrentHashMap is a thread-safe implementation of Map interface. In this class <code>put</code> and <code>remove</code> methods are synchronized but not <code>get</code> method. This class is different from Hashtable in terms of locking; it means that hashtable use object level lock but this class uses bucket level lock thus having better performance. The allowed concurrency among update operations is guided by the optional <i>concurrencyLevel</i> constructor argument (default 16), which is used as a hint for internal sizing. The table is internally partitioned to try to permit the indicated number of concurrent updates without contention. Because placement in hash tables is essentially random, the actual concurrency will vary. Ideally, you should choose a value to accommodate as many threads as will ever concurrently modify the table. Using a significantly higher value than you need can waste space and time, and a significantly lower value can lead to thread contention. But overestimates and underestimates within an order of magnitude do not usually have much noticeable impact. A value of one is appropriate when it is known that only one thread will modify and all others will only read. Also, resizing this or any other kind of hash table is a relatively slow operation, so, when possible, it is a good idea to provide estimates of expected table sizes in constructors.</p></div>
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4267874373737812" data-ad-slot="7600236816"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<span id=""><p><strong> Q) What is the difference between iterator access and index access?</strong></p><p>Ans) Index based access allows access of the element directly on the basis of index. The cursor of the data structure can directly goto the 'nth' location and get the element. It does not have to traverse through n-1 elements.</p><p>In Iterator based access, the cursor has to traverse through each element to get the desired element. So to reach the 'nth' element it needs to traverse through n-1 elements.</p><p>Insertion, updation or deletion will be faster for iterator based access if the operations are performed on elements present in middle of the data structure.</p><p>Insertion, updation or deletion will be faster for index based access if the operations are performed on elements present at the end of the data structure.</p><p>Traversal or search in index based data structure is faster.</p><p>ArrayList is index access and LinkedList is iterator access.</p></span></div>
+<div id=""><strong><p>Q) How to sort a list in reverse order?</p></strong>
+<p>Ans) To sort the elements in the reverse natural order of the strings, get a reverse Comparator from the Collections class with reverseOrder(). Then,  pass the reverse Comparator to the sort() method.
+<pre><code class="language-java">List list = new ArrayList();
+Comparator comp = Collections.reverseOrder();
+Collections.sort(list, comp)</code></pre></p>
+</div>
+<div id=""><strong><p> Q) Can a <code>null</code> element be added to a Treeset or HashSet?</p></strong>
+<p>Ans) A <code>null</code> element can be added only if the set is of size 1 because when a second element is added then as per set definition a check is made to check duplicate value and comparison with null element will throw NullPointerException.<br/>HashSet is based on hashMap and can contain null element.</p></div>
+<div id=""><strong><p> Q) How to sort a list of strings - case insensitive ?</p></strong>
+<p> Ans)  <code>Collections.sort(list, String.CASE_INSENSITIVE_ORDER);</code></p></div>
+<div id=""><p><strong>Q) How to make a List (ArrayList,Vector,LinkedList) read only ?</strong></p>
+<p>Ans) A list implemenation can be made read only using <strong>Collections.unmodifiableList(list)</strong>. This method returns a new list. If a user tries to perform add operation on the new list; UnSupportedOperationException is thrown.</p></div>
+<div id=""><p><strong>Q) Arrange in the order of speed - HashMap, HashTable, Collections.synchronizedMap, ConcurrentHashmap.</strong></p>
+<p>Ans) HashMap is fastest, ConcurrentHashMap, Collections.synchronizedMap, HashTable.</p></div>
+<div id=""><p><strong>Q) What is WeakHashMap?</strong></p>
+<p>Ans) A hashtable-based Map implementation with weak keys. An entry in a WeakHashMap will automatically be removed when its key is no longer in ordinary use. More precisely, the presence of a mapping for a given key will not prevent the key from being discarded by the garbage collector, that is, made finalizable, finalized, and then reclaimed. When a key has been discarded its entry is effectively removed from the map, so this class behaves somewhat differently than other Map implementations.</p>
+</div>
+<div><p><b>Recommend Reading</b></p>
+<ol style="list-style-type:none">
+<li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
+<li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li>
+<li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li>
+<li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference between equals and ==?</a></li>
+<li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
+<li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li>
+<li><a href="java-immutable-class.html">Why is it recommended to use Immutable objects in Java</a></li></ol></div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'java-questions';
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div> <!-- dashboard -->
+<div class="col-sm-3 col-md-4"> 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="3435398011"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="4912131216"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div></div><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-23729980-1', 'auto');
+ga('send', 'pageview');</script>
+<footer style="background-color: #3c3d41;padding: 30px 30px;color: rgba(255,255,255,1.00);margin-bottom: 20px;border-bottom-right-radius: 6px;border-top-left-radius: 0px;border-bottom-left-radius: 6px;">
+<div class="row">
+<h4>Recommend Reading</h4>
+<div class="col-md-6">
+<ul class="pages">
+<li><a href="java-memory-model-and-garbage-clilections.html">How java manages Memory?</a></li>
+<li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li>
+<li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li>
+<li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference betwen equals and ==?</a></li>
+<li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
+<li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li>
+<li><a href="java-immutable-class.html">Why is it recommended to ues Immutable objects in Java</a></li>
+</ul>
+<p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
+</div>
+<div class="col-md-5 animated fadeInRight">
+<h3>Subscribe to get latest updates.</h3>
+<form action="//java-questions.us5.list-manage.com/subscribe/post?u=eef8f08d0222ba841685ce4e2&amp;id=3670638f6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div id="mc_embed_signup_scroll">
+<div class="mc-field-group">
+<label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);">
+</div>
+<div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div>
+</form></div></p></div></div></footer></body></html>

@@ -1,0 +1,239 @@
+<html><head><title>Linked List Data Structures</title>
+<meta name="description" content="Linked List Data Structures explained in details"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/><link rel="alternate" href="http://java-questions.com" hreflang="en-us" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+<script type="text/javascript" src="../js/prism.js" async defer></script>
+
+<link href="../css/prism.css" rel="stylesheet"/>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async defer></script>
+<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+<div class="navbar-header">          
+<a class="navbar-brand" href="/">Java Interview questions</a>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Java Interview<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>   
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Jsp Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>  
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li> 
+</ul></li>
+<li><a href="java-articles.html">Java-Articles</a></li>    
+</ul>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-right">
+</ul></div></div></div>
+<div class="container-fluid main">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
+<ul class="nav nav-sidebar">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li>
+<li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
+</ul></div>
+<div class="col-sm-6 col-md-6">
+<h1>Operations on LinkedList.</h1>
+
+<div><p>To understand semantics about linked list, refer this link <a href="/linked-list-in-details.html">Linked List in details</a>.</p>
+<p> The LinkedList for the example is singly. Here is how Node class looks like:</p>
+<pre><code class="language-java">class Node {
+	int value;
+	protected Node next;
+	
+	public Node(int value) {
+		this.value = value;
+	}
+	
+	public int getValue() {
+		return value;
+	}
+}
+</code></pre>
+<br/>
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="6388864415"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<p><b>Most common operations on a linkedlist: </b>
+<ol><li> Create a linkedlist.</li><li>Add an element a beginning of the list.</li><li>Find an element in the list.</li><li>Remove an element from the list.</li>
+<li>Print elements of the list.</li></ol></p>
+<br/>
+<pre><code class="language-java">public class LinkedList {
+	/**
+	 * Add a the end of the list.
+	 */
+	public void addNode(int value, Node curr) {
+		if(curr == null) {
+			curr = new Node(value);
+			return;
+		} 
+		else {
+			while(curr.next != null) {
+				curr = curr.next;
+			}
+			curr.next = new Node(value);
+		}
+	}
+	
+	/**
+	 * Find the first occurrence of the element and return the node 
+	 */
+	public Node find(int value, Node curr) {
+		while(curr != null && curr.value == value) {
+			curr = curr.next;
+		}
+		return curr;
+	}
+	
+	/**
+	 * Print all elements in the list 
+	 */
+	public void print(Node curr) {
+		while(curr != null) {
+			System.out.print(curr.value + " " );
+			curr =curr.next;
+		}
+	}
+
+	/**
+	 * Remove element from the list.
+	 * Handle cases:
+	 *  a) Multiple occurrences of the element
+	 *  b) Element at start or end of the list
+	 *  c) Element repeated. 
+	 */
+	public Node removeNode(int value, Node curr) {
+		Node start = curr;
+		while(start.next != null) {
+			if(start.next.value == value) {
+				start.next = start.next.next;
+			} else 
+				start = start.next;
+		}
+		if( curr.value == value ) {
+			curr = curr.next;
+		}
+		return curr;
+	}	
+
+	public static void main(String args[]) {
+		Node start = new Node(1);
+		LinkedList l = new LinkedList();
+		l.addNode(1, start);
+		l.addNode(1, start);
+		l.addNode(5, start);
+		l.addNode(1, start);
+		l.print(start);
+		start = l.removeNode(1, start);
+		System.out.println(" ");
+		l.print(start);
+	}
+}
+</code></pre>
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'java-questions';
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div> <!-- dashboard -->
+<div class="col-sm-3 col-md-4">
+<div style="margin: 5px; float: center;">  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop1 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="3435398011"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop2 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="4912131216"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div></div><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-23729980-1', 'auto');
+ga('send', 'pageview');
+</script>
+<div class="container" style="background:rgb(212, 212, 212);">
+<div class="col-sm-6 col-md-6">
+<h4><b>More Interesting Reads</b></h4>
+<ul><li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
+<li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li>
+<li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li>
+<li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference betwen equals and ==?</a></li>
+<li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
+<li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li>
+<li><a href="java-immutable-class.html">Why is it recommended to ues Immutable objects in Java</a></li></ul>
+</div></div>
+<footer class="footer">
+<div class="container">
+<p class="text-muted">&copy 2015 Java Questions | <a href="sitemap.xml">Sitemap</a></p>
+</div>
+</footer></body></html>

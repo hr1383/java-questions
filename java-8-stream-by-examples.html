@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Java 8 Stream Expressions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Java 8 Stream differs from java collections and provide advantage over traditional approach."/>
+<link rel="canonical" href="http://java-questions.com/java-8-stream-by-examples.html"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link href="css/prism.css" rel="stylesheet"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async defer></script>
+<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<body><nav class="navbar navbar-inverse">
+<div class="container-fluid"><div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button>
+<a class="navbar-brand" href="/">Java Interview questions</a></div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Java Interview<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>   
+</ul></li>
+</ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Jsp Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>  
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li> 
+</ul></li><li><a href="data-structures-in-details.html">Data Structures</a></li><li><a href="java-articles.html">Java-Articles</a></li><li><a href="java-books.html">Books</a></li></ul></div></div>
+</nav>
+<div class="container-fluid main">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
+<ul class="nav nav-sidebar">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li>
+<li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
+</ul></div>
+<div class="col-sm-6 col-md-6">
+<h1>Java 8 Streams</h1>
+
+<div><p><b>What is Stream in Java ? </b></p>
+<p>Stream in Java is a sequence of elements on which operations can be performed. Stream operations can be <code>intermediate</code> or <code>terminal</code>. This definition sounds very similar to exisiting <b>Collections</b>.</p>
+<p><b>What is difference between Collections and Streams</b>
+<p>Collections is an in memory data structure which holds all the elements in the memory. In Stream the elements are computed on demand and the values are passed to next stream or returned. In Collection, the entire collection has to be computed to pass on to the next collection, whereas stream passes elements as it computes to the next Stream thus allowing Stream not to store the complete data set im memory.</p>
+<p>Stream operations are <code>terminal</code> or <code>intermediate</code> and are combined to form <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#StreamOps">stream pipelines</a>. A stream pipeline consists of a source (such as a Collection, an array, a generator function, or an I/O channel); followed by zero or more intermediate operations such as <code>Stream.filter</code> or <code>Stream.map</code> and a terminal operation such as <code>Stream.forEach</code> or <code>Stream.reduce</code>. Terminal operations return a result of certain type and intermediate returns the Stream itself allowing to have multiple streams in a chain. Most of the stream operations take some kind of lambda expressions.</p>
+<p><b>Types of Streams</b></p>
+<p>Streams can be created from different sources and collections such as List and Set. The classes Stream, IntStream, LongStream, and DoubleStream are streams over objects and the primitive int, long and double types.
+<p>Streams can be generated:</p>
+<ul><li><b>From collections</b>
+<pre><code class="language-java">Arrays.asList("a1", "a2", "a3")
+    .stream()
+    .forEach(System.out::println)
+    
+    List l = new ArrayList() ;
+    l.stream()
+     .forEach(System.out::println)</code></pre></li>
+<li><b>Stream class static method</b>
+<pre><code class="language-java">Stream.of("a1", "a2", "a3")
+    .stream()
+    .forEach(System.out::println)</code></pre></li>    
+<li><b>IntStream, DoubleStream static methods</b>
+<pre><code class="language-java">IntStream.range(1, 10)
+    .forEach(System.out::println);</code></pre></li>    
+</ul>
+<p>Note: <code>forEach</code> is a terminal function here</p>
+<p><b>Mapping regular <code>Stream</code> to primitive Stream.</b></p>
+<p>Sometimes it's useful to transform a regular object stream to a primitive stream or vice versa.</p>
+<pre><code class="language-java">Stream.of("1", "2", "3")
+  .mapToInt(Integer::parseInt)
+  .average()
+  .ifPresent(System.out::println);
+
+IntStream.range(2013, 2016)
+  .mapToObj(i -> "Year " + i)
+  .forEach(System.out::println);
+
+//Output
+2.0
+
+Year 2013
+Year 2014
+Year 2015
+</code></pre>
+<p><b>Stream Intermediate Functions</b></p>
+<div><span class="pull-right"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4267874373737812" data-ad-slot="6388864415"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></span>
+<p>Intermediate functions returns the Stream itself, allowing to chain multiple such functions. Intermediate functions are lazily executed which means unless there is a terminal function append to Stream, the intermediate funciton will not be called. Some of commonly used functions:</p></div>
+<ul><li><b>filter(): </b><p>As name suggests, it is used for filtering the elements from this stream which doesn't satisy a  criteria. </p>
+<pre><code class="language-java">IntStream.range(1,10)
+	.filter(num -> num%3 == 0)
+	.forEach(System.out::println);
+</code></pre>
+</li>
+<li><b>map(): </b><p>Returns a stream consisting of the results of applying the given function to the elements of this stream</p> 
+<pre><code class="language-java">Stream.of("mon", "tues", "wed", "thur", "fri", "sat", "sun")
+  .map(String::toUpperCase)
+  .forEach(System.out::println);
+
+//Output
+MON
+TUES
+WED
+THUR
+FRI
+SAT
+SUN
+
+//using filter with map
+Stream.of("mon", "tues", "wed", "thur", "fri", "sat", "sun")
+  .map(String::toUpperCase)
+  .filter(s -> s.contains("T"))
+  .forEach(System.out::println);
+//OUTPUT
+TUES
+THUR
+SAT</code></pre>
+One thing to note is that the ordering in which the functions are defined matter and execution takes place in the similar manner.</li>
+<li><b>sorted(): </b>Returns the stream in a sorted manner.
+<pre><code class-"language-java">Stream.of("mon", "tues", "wed", "thur", "fri", "sat", "sun")
+  .map(String::toUpperCase) 
+  .sorted()
+  .forEach(System.out::println);
+//Output
+FRI
+MON
+SAT
+SUN
+THUR
+TUES
+WED</code></pre></li></ul> 
+<p><b>Stream Terminal Functions</b></p> 
+<ul><li><b>collect(): </b>Used to convert the stream elements to collections
+<pre><code class="language-java">Stream.of("mon", "tues", "wed", "thur", "fri", "sat", "sun")
+  .map(String::toUpperCase)
+  .collect(Collectors.toList())
+//to Set
+Stream.of("mon", "tues", "wed", "thur", "fri", "sat", "sun")
+  .map(String::toUpperCase)
+  .collect(Collectors.toSet())</code></pre>
+ </li>
+ <li><b>forEach():</b> Performs an action for each element of this stream.
+<pre><code class="language-java">Stream.of("mon", "tues", "wed", "thur", "fri", "sat", "sun")
+  .map(String::toUpperCase) 
+  .sorted()
+  .forEach(System.out::println);
+//Output
+FRI
+MON
+SAT
+SUN
+THUR
+TUES
+WED</code></pre></li>
+<li><b>count(), sum(), average(): </b>Self explanatory functions.</li>
+<li><b>anyMatch(): </b>Returns whether any elements of this stream match the provided predicate. It may not evaluate the predicate on all elements if not necessary for determining the result.
+<pre><code class="language-java">boolean isPresent = IntStream.range(1,10)
+  .anyMatch(num -> num %3 == 0);
+System.out.println(isPresent);
+//Output
+true</code></pre></li>
+<li><b>findFirst() :</b>Will return the first element matching the <code>Predicate</code>.
+<pre><code class="language-java">int num = IntStream.range(4,10)
+  .filter(n -> n%3 ==0)
+  .findFirst()
+  .getAsInt();
+//Output
+6</code></pre></li>
+<li><b>findAny() :</b>Will return some element matching the <code>Predicate</code> The behavior of the operation is nondeterministic. This is mainly used with parallel streams.
+<pre><code class="language-java">int num = IntStream.range(4,10)
+  .filter(n -> n%3 ==0)
+  .findAny()
+  .getAsInt();
+//Output
+6</code></pre></li>
+ </ul> 
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'java-questions';
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div> <!-- dashboard -->
+<div class="col-sm-3 col-md-4">
+<div style="margin: 5px; float: center;">  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop1 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="3435398011"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop2 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="4912131216"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div></div><script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-23729980-1', 'auto');
+ga('send', 'pageview');
+</script><footer style="background-color: #3c3d41;padding: 30px 30px;color: rgba(255,255,255,1.00);margin-bottom: 20px;border-bottom-right-radius: 6px;border-top-left-radius: 0px;border-bottom-left-radius: 6px;">
+<div class="row"><h4>Recommend Reading</h4><div class="col-md-6">
+<ul class="pages"><li><a href="java-memory-model-and-garbage-clilections.html">How java manages Memory?</a></li><li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li><li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li><li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="java-8-lambda-expressions.html">Lambdas in Java8</a></li><li><a href="java-concurrenthashmap.html">How Concurrent HashMap Works?</a></li><li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li><li><a href="log-structured-merge-trees.html">Log Structured Merge Trees</a></li></ul><p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
+</div><div class="col-md-5 animated fadeInRight"><h3>Subscribe to get latest updates.</h3><form action="//java-questions.us5.list-manage.com/subscribe/post?u=eef8f08d0222ba841685ce4e2&amp;id=3670638f6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><div id="mc_embed_signup_scroll"><div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);"></div><div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div></form></div></p></div></div></footer></body></html>

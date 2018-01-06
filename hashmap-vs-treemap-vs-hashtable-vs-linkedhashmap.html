@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g' lang="en"><head>
+<title>Difference between hashmap, hashtable, linkedhashmap and treemap</title>
+<meta name="description" content="Difference between hashmap, hashtable, linkedhashmap and treemap"/> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<link rel="canonical" href="http://java-questions.com/hashmap-vs-treemap-vs-hashtable-vs-linkedhashmap.html"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<script type="text/javascript" src="js/prism.js" async></script>
+<link href="css/prism.css" rel="stylesheet"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script>
+<script type="text/javascript" src="js/prism.js" async="async"></script></head><body>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/">Java Interview questions</a>
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Java Interview<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>   
+</ul></li>
+</ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Jsp Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>  
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li> 
+</ul></li>
+<li><a href="data-structures-in-details.html">Data Structures</a></li>
+<li><a href="java-articles.html">Java-Articles</a></li><li><a href="java-books.html">Books</a></li></ul></div></div>
+</nav>
+<div class="container-fluid main">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
+<ul class="nav nav-sidebar">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li>
+<li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
+</ul></div>
+<div class="col-sm-3 col-md-6">
+<h2>What are difference type of Map implementation?</h2>
+
+<p>Java collections Map Interface have multiple implementations. Different types of maps, such as HashMap, TreeMap, HashTable and LinkedHashMap.</p><img src="/img/java-collections.png" alt="java Map interface hierarchy"/>
+<br/><h4><b>What is Map?</b></h4>
+<p><ul><li>Map is an interface which is used to store key, value pairs.</li><li>The typical operation for a Map is <code>get()</code> and <code>put()</code>.</li>
+<li>To store and get the element Map uses hashcode() and equal() method. <a href="/java-hashcode-and-equals.html"> How hashcode and equals work</a></li><li>If a same key is used multiple times for <code>put()</code> method the value will be overwritten at each operation.</li></ul></p>
+<h4><b>HashMap</b></h4>
+<p>It is most commonly used and basic implementation of Map interface. While traversing the Map, the order of traversal is not same as insertion. So there is not gurantee of order. The <code>get()</code> and <code>put()</code> takes <i>O(1)</i> time whereas traversal of all elements is done using <code>java.util.Iterator</code> in <i>O(n)</i> time.</p>
+<pre><code class="language-java">import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class UseHashMap {
+
+	public static void main(String[] args) {
+		//Create a HashMap and store elements in the Map
+		 Map&lt;String, Integer&gt; days = new HashMap&lt;String, Integer&gt;();
+		 days.put("Sunday", 1);
+		 days.put("Monday", 2);
+		 days.put("Tuesday", 3);
+		 days.put("Wednesday", 4);
+		 days.put("Thursday", 5);
+		 days.put("Friday", 6);
+		 days.put("Saturday", 7);
+		 
+		 //get elements from the Map
+		 System.out.println("Sunday is " + days.get("Sunday"));
+		 System.out.println("If key not present value is " + days.get("ABC"));
+		 
+		 //Iterate all elements
+		 for(Entry&lt;String, Integer&gt; entry : days.entrySet()) {
+		   System.out.println(entry.getKey() + "\t" + entry.getValue());
+		 }
+		 //Iterate using keys
+		 Iterator&lt;String&gt; keys = days.keySet().iterator();
+		 while(keys.hasNext()) {
+		   String key = keys.next();
+		   System.out.println(key +"\t" + days.get(key));
+		 }
+	}
+
+}
+Sunday is 1
+If key not present value is null
+
+Saturday	7
+Thursday	5
+Monday	2
+Tuesday	3
+Wednesday	4
+Friday	6
+Sunday	1
+
+Saturday	7
+Thursday	5
+Monday	2
+Tuesday	3
+Wednesday	4
+Friday	6
+Sunday	1
+</code></pre>
+<span class="pull-right"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="6388864415"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></span>
+<h4><b>HashTable</b></h4>
+<p>HashTable behaves very similar to HashMap but hashtable is thread-safe, all the methods are declared with <b>synchronized</b> keyword making the collection threadsafe and a good candidate to be used in multithreaded applications. However because of this additional wrapper the HashTable performance is slower than the HashMap. This means that in a multithreaded application, only one thread can gets access to a hashtable object and do an operation on it.</p> 
+<h4><b>TreeMap</b></h4>
+<p>The Map which stores key in sorted manner, such that while traversal the keys are sorted. This implementation provides guaranteed <i>log(n)</i> time cost for the <code>containsKey()</code>, <code>get()</code>, <code>put()</code> and <code>remove()</code> operations. The tree implementation is <b>Red-Black</b> Tree. The map is sorted according to the natural ordering of its keys, or by a Comparator provided at map creation time, depending on which constructor is used.</p>
+<pre><code class="language-java">import java.util.Map;
+import java.util.Map.Entry;
+import java.util.TreeMap;
+
+public class UseTreeMap {
+
+	public static void main(String[] args) {
+		//Create a store elements in the Map
+		 Map&lt;String, Integer&gt; days = new TreeMap&lt;String, Integer&gt;();
+		 days.put("Sunday", 1);
+		 days.put("Monday", 2);
+		 days.put("Tuesday", 3);
+		 days.put("Wednesday", 4);
+		 days.put("Thursday", 5);
+		 days.put("Friday", 6);
+		 days.put("Saturday", 7);
+		 
+		 //Iterate all elements
+		 for(Entry&lt;String, Integer&gt; entry : days.entrySet()) {
+		  System.out.println(entry.getKey() + "\t" + entry.getValue());
+		 }
+	}
+}
+
+//output
+Friday	6
+Monday	2
+Saturday	7
+Sunday	1
+Thursday	5
+Tuesday	3
+Wednesday	4
+</code></pre>
+<span class="pull-right"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="6388864415"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></span>
+<h4><b>LinkedHashMap</b></h4>
+<p>LinkedHashMap is a combination of hashmap and linked list, with predictable iteration order.
+<ul><li>In the LinkedHashMap implementation, the <code>LinkedHashMap.Entry</code> class extends the <code>HashMap.Entry</code> class, by adding <i>before</i> and <i>after</i> fields. These fields are used to assemble the <code>LinkedHashMap.Entry</code> objects into an independent doubly-linked list that records the insertion order. So, in the LinkedHashMap class, the entry objects are in two distinct chains:</li>
+<ul><li>a singly linked hash chain that is accessed via the main hash array, and</li>
+<li>a separate doubly linked list of all entries that is kept in entry insertion order.</li></ul>
+<li> Like HashMap, it provides constant-time performance O(1) for the basic operations (add, contains and remove), assuming the hash function disperses elements properly among the buckets.</li> <li>Performance is likely to be just slightly below that of HashMap, due to the added expense of maintaining the linked list, with one exception: Iteration over the collection-views of a LinkedHashMap requires time proportional to the size of the map, regardless of its capacity. Iteration over a HashMap is likely to be more expensive, requiring time proportional to its capacity.</li></p>
+<pre><code class="language-java">import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.TreeMap;
+
+public class UseLinkedHashMap {
+
+	public static void main(String[] args) {
+		 Map&lt;String, Integer&gt; days = new LinkedHashMap&lt;String, Integer&gt;();
+		 days.put("Sunday", 1);
+		 days.put("Monday", 2);
+		 days.put("Tuesday", 3);
+		 days.put("Wednesday", 4);
+		 days.put("Thursday", 5);
+		 days.put("Friday", 6);
+		 days.put("Saturday", 7);
+		 
+		 //Iterate all elements
+		 for(Entry&lt;String, Integer&gt; entry : days.entrySet()) {
+	       System.out.println(entry.getKey() + "\t" + entry.getValue());
+		 }
+	}
+
+}
+//output 
+Sunday	1
+Monday	2
+Tuesday	3
+Wednesday	4
+Thursday	5
+Friday	6
+Saturday	7
+</code></pre>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'java-questions';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+<div class="col-sm-3 col-md-4">
+<div style="margin: 5px; float: center;">  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop1 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="3435398011"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="4912131216"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div></div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-23729980-1', 'auto');
+ga('send', 'pageview');
+</script><footer style="background-color: #3c3d41;padding: 30px 30px;color: rgba(255,255,255,1.00);margin-bottom: 20px;border-bottom-right-radius: 6px;border-top-left-radius: 0px;border-bottom-left-radius: 6px;">
+<div class="row"><h4>Recommend Reading</h4><div class="col-md-6">
+<ul class="pages"><li><a href="java-memory-model-and-garbage-clilections.html">How java manages Memory?</a></li><li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li><li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li><li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference betwen equals and ==?</a></li><li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
+<li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li><li><a href="java-immutable-class.html">Why is it recommended to ues Immutable objects in Java</a></li>
+</ul><p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
+</div>
+<div class="col-md-5 animated fadeInRight">
+<h3>Subscribe to get latest updates.</h3>
+<form action="//java-questions.us5.list-manage.com/subscribe/post?u=eef8f08d0222ba841685ce4e2&amp;id=3670638f6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div id="mc_embed_signup_scroll">
+<div class="mc-field-group">
+<label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);">
+</div>
+<div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div>
+</form></div></p></div></div></footer></body></html>

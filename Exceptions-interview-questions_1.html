@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Java programming Exception questions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta name="description" content="Java Exceptions Interview questions explains concepts such as Error, Excpetion hierarchy and more."/>
+<link rel="canonical" href="http://java-questions.com/Exceptions-interview-questions_1.html"/>
+<meta name="keywords" content="java exception interview questions, exception interview questions, try catch block,difference between checked and unchecked exception, difference between error and exception"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link href="css/prism.css" rel="stylesheet"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script>
+<script type="text/javascript" src="js/prism.js" async="async"></script></head><body>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid"><div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button>
+<a class="navbar-brand" href="/">Java Interview questions</a></div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav"><li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Java Interview<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>   
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Jsp Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>  
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"><li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li><li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li><li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li></ul></li><li><a href="data-structures-in-details.html">Data Structures</a></li><li><a href="java-articles.html">Java-Articles</a></li><li><a href="java-books.html">Books</a></li>
+</ul></div><!--/.nav-collapse --></div><!--/.container-fluid --></nav>
+<div class="container-fluid main">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
+<ul class="nav nav-sidebar">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
+</ul></div>
+<div class="col-sm-6 col-md-6">
+<h1>Java Exception Interview Questions</h1>  
+<div id=""><p><strong>Q16) Once the control switches to the catch block does it return back to the try block to execute the balance code?</strong></p>
+<p>Ans) No. Once the control jumps to the catch block it never returns to the try block but it goes  to finally block(if present).</p>
+</div>
+<div id=""><p><strong>Q17) Where is the clean up code like release of resources is put in try-catch-finally block and why?</strong></p>
+<p>Ans) The code is put in a finally block because irrespective of try or catch block execution the control will flow to finally block. Typically finally block contains release of connections, closing of result set etc.</p>
+</div>
+<div id=""><p><strong>Q18) Is it valid to have a try block without catch or finally?</strong></p>
+<p>Ans) NO. This will result in a compilation error. The try block must be followed by a catch or a finally block. It is acceptable to omit the either catch or the finally block but not both.            
+</div>
+<div id=""><strong><p>Q21) How do you get the descriptive information about the Exception occurred during the program execution?</p></strong>
+<p> Ans) All the exceptions inherit a method printStackTrace() from the Throwable class. This method prints the stack trace from where the exception occurred. It prints the most recently entered method first and continues down, printing the name of each method as it works its way down the call stack from the top.</p>
+</div>
+<div id=""><p><strong>Q23)Why is not considered as a good practice to write a single catch all handler to catch all the exceptions?</strong></p>
+<p> Ans) You can write a single catch block to handle all the exceptions thrown during the program.
+<p>If you use the Superclass Exception in the catch block then you will not get the valuable information about each of the exception thrown during the execution, though you can find out the class of the exception occurred. Also it will reduce the readability of the code as the programmer will not understand what is the exact reason for putting the try-catch block.</p>
+</div>
+<div id=""><p> <strong>Q24) What is exception matching?</strong></p>
+<p> Ans) Exception matching is the process by which the the jvm finds out the matching catch block for the exception thrown from the list of catch blocks. When an exception is thrown, Java will try to find by looking at the available catch clauses in the top down manner.
+If it doesn't find one, it will search for a handler for a supertype of the exception. If it does not
+find a catch clause that matches a supertype for the exception, then the exception
+is propagated down the call stack. This process is called exception matching.</p></div>
+<div id=""><p><strong>Q25) What happens if the handlers for the most specific exceptions is placed above the more general exceptions handler?</strong></p>   
+<p>Ans) Compilation fails. The catch block for handling the most specific exceptions must always be placed above the catch block written to handle the more general exceptions.</p>
+<pre><code class="language-java">//The code below will not compile.
+try {            
+    // code that can throw IOException or its subtypes             
+} catch (IOException e) {
+// handles IOExceptions and its subtypes
+} catch (FileNotFoundException ex) { 
+    // handle FileNotFoundException only
+}
+
+// The code below will compile successfully
+try {
+  // code that can throw IOException or its subtypes 
+} catch (FileNotFoundException ex)  {
+// handles IOExceptions and its subtypes
+} catch (IOException e){
+// handle FileNotFoundException only
+}</code></pre></div>
+<div id=""><strong><p> Q26) Does the order of the catch blocks matter if the Exceptions caught by them are not subtype or supertype of each other? </p></strong>
+<p>Ans) No. If the exceptions are siblings in the Exception class&#8217;s hierarchy i.e. If one Exception class is not a subtype or supertype of the other, then the order in which
+their handlers(catch clauses) are placed does not matter.</p></div> 
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-middle -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="6388864415"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div id="">
+<p><strong>Q27) What happens if a method does not throw an checked Exception directly but calls a method that does? What does 'Ducking' the exception mean?</strong></p>
+<p>Ans) If a method does not throw an checked  Exception directly but calls a method that throws an exception then the calling method must handle the throw exception or declare the exception in its throws clause. If the calling method does not handle and declares the exception, the exceptions is passed to the next method in the method stack. This is called as ducking the exception down the method stack.</p>
+<p>e.g. The code below will not compile as the getCar() method has not declared the CarNotFoundException which is thrown by the getColor () method.</p>
+      <pre><code class="language-java">void getCar() {
+ getColor();
+}
+void getColor() {
+ throw new CarNotFoundException();
+}
+//Fix for the above code is
+void getCar() throws CarNotFoundException {
+   getColor();
+}
+void getColor() {
+  throw new CarNotFoundException();
+}</code></pre>
+      </div>
+<div id="">
+<strong><p>Q28) Is an empty catch block legal?</p></strong>
+<p>Ans) Yes you can leave the catch block without writing any actual code to handle the exception caught</p>
+<p>e.g. The code below is legal but not appropriate, as in this case you will nt get any information about the exception thrown.</p></div>
+<div id=""><p><strong>Q29)Can a catch block throw the exception caught by itself?</strong> </p>
+<p>Ans) Yes. This is called rethrowing of the exception by catch block.</p>
+<p>e.g. the catch block below catches the FileNotFound exception and rethrows it again.</p>
+      <pre><code class="language-java">void checkEx() throws FileNotFoundException {
+  try{
+    //code that may throw the FileNotFoundException
+
+  }catch(FileNotFound eFnf){
+    throw FileNotFound();
+  }
+}</code></pre>    
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'java-questions';
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div> <!-- dashboard -->
+<div class="col-sm-3 col-md-4">
+<div style="margin: 5px; float: center;">  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="3435398011"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="4912131216"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div></div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-23729980-1', 'auto');
+ga('send', 'pageview');
+</script><footer style="background-color: #3c3d41;padding: 30px 30px;color: rgba(255,255,255,1.00);margin-bottom: 20px;border-bottom-right-radius: 6px;border-top-left-radius: 0px;border-bottom-left-radius: 6px;">
+<div class="row">
+<h4>Recommend Reading</h4>
+<div class="col-md-6">
+<ul class="pages">
+<li><a href="java-memory-model-and-garbage-clilections.html">How java manages Memory?</a></li>
+<li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li>
+<li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li>
+<li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference betwen equals and ==?</a></li>
+<li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
+<li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li>
+<li><a href="java-immutable-class.html">Why is it recommended to ues Immutable objects in Java</a></li>
+</ul>
+<p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
+</div>
+<div class="col-md-5 animated fadeInRight">
+<h3>Subscribe to get latest updates.</h3>
+<form action="//java-questions.us5.list-manage.com/subscribe/post?u=eef8f08d0222ba841685ce4e2&amp;id=3670638f6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div id="mc_embed_signup_scroll">
+<div class="mc-field-group">
+<label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);">
+</div>
+<div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div>
+</form></div></p></div></div></footer></body></html>

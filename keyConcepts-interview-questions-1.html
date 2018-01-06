@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/><link rel="alternate" href="http://java-questions.com" hreflang="en-us" />
+<title>Java Keyconcept interview questions | Java/J2EE interview questions</title>
+<link rel="canonical" href="https://java-questions.com/keyConcepts-interview-questions-1.html"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link href="css/prism.css" rel="stylesheet"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script>
+<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<body>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid"><div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button>
+<a class="navbar-brand" href="/">Java Interview questions</a></div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav"><li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Java Interview<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>   
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Jsp Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>  
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"><li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li><li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li><li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li></ul></li><li><a href="data-structures-in-details.html">Data Structures</a></li><li><a href="java-articles.html">Java-Articles</a></li><li><a href="java-books.html">Books</a></li>
+</ul></div><!--/.nav-collapse --></div><!--/.container-fluid --></nav>
+<div class="container-fluid main">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
+<ul class="nav nav-sidebar">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li>
+<li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
+</ul></div>
+<div class="col-sm-6 col-md-6">
+<h1>Keywords and Concepts In Java</h1>         
+<div id=""><p><strong>Q16) Can an abstract class have a static method?</strong></p>
+<p>Ans) Yes an abstract class have a static method and it can be accessed by any other class(even not a concrete class).</p>
+</div>
+<div id=""><p><strong>Q17) Can an abstract class have a constructor?</strong></p>
+<p>Ans) Yes an abstract class have a default and parameterized constructors.</p>
+</div>
+<div id=""><p><strong>Q18) Why static methods cannot access non static variables or methods?</strong></p>
+<p>Ans) A static method cannot access non static variables or methods because static methods doesnt need the object to be accessed. So if a static method has non static variables or non static methods which has instantiated variables they will no be intialized since the object is not created and this could result in an error.</p>
+</div>
+<div id=""><p><strong>Q19) What is difference between stringbuffer and stringbuilder?</strong></p>
+<p>Ans) The only difference between StringBuffer and StringBuilder is that StringBuilder is unsynchronized whereas StringBuffer is synchronized. So when the application needs to be run only in a single thread then it is better to use StringBuilder. StringBuilder is more efficient than StringBuffer.</p>
+<p>Criteria to choose among StringBuffer and StringBuilder</p>
+<ul><li> If your text can change and will only be accessed from a single thread, use a StringBuilder 2)because StringBuilder is unsynchronized. </li>
+<li>If your text can changes, and will be accessed from multiple threads, use a StringBuffer because StringBuffer is synchronous.</li></p>
+</div>
+<div id=""><p><strong>Q20) Consider a scenario in which the admin want to sure that if some one has written System.exit() at some part of application then before system shutdown all the resources should be released. How is it possible?</strong></p>
+<p> Ans) This is possible using <strong>Runtime.getRuntime().addShutdownHook(Thread hook)</strong>.<br/>
+<i>Straight from Java Spec:</i><br/>
+This method registers a new virtual-machine shutdown hook. <br/>
+The Java virtual machine shuts down in response to two kinds of events: 
+<ul><li> The program exits normally, when the last non-daemon thread exits or when the exit (equivalently, System.exit) method is invoked.</li>
+<li>The virtual machine is terminated in response to a user interrupt, such as typing ^C, or a system-wide event, such as user logoff or system shutdown.</li> 
+</ul></p>
+<p> A shutdown hook is simply an initialized but unstarted thread. When the virtual machine begins its shutdown sequence it will start all registered shutdown hooks in some unspecified order and let them run concurrently. When all the hooks have finished it will then run all uninvoked finalizers if finalization-on-exit has been enabled. Finally, the virtual machine will halt. Note that daemon threads will continue to run during the shutdown sequence, as will non-daemon threads if shutdown was initiated by invoking the exit method. <br/>
+Once the shutdown sequence has begun it can be stopped only by invoking the halt method, which forcibly terminates the virtual machine.</p>
+</div>
+<div id=""><p><strong>Q21) What is the difference between final, finally and finalize() in Java?</strong></p>
+<p> Ans) <strong>final</strong> - declaread as constant. A final variable act as constant, a final class is immutable and a final method cannot be ovrriden.</p>
+<p><strong>finally </strong>- handles exception. The finally block is optional and provides a mechanism to clean up regardless of what happens within the try block (except System.exit(0) call). Use the finally block to close files or to release other system resources like database connections, statements etc.</p>
+<p><strong>finalize()</strong> - method helps in garbage collection. A method that is invoked before an object is discarded by the garbage collector, allowing it to clean up its state. Should not be used to release non-memory resources like file handles, sockets, database connections etc because Java has only a finite number of these resources and you do not know when the garbage collection is going to kick in to release these non-memory resources through the finalize() method.</p></div>
+<div id="">
+<p><strong>Q22) How does Java allocate stack and heap memory?</strong></p>
+<p> Ans) Each time an object is created in Java it goes into the part of memory known as <strong>heap</strong>. The primitive variables like int and double are allocated in the <strong>stack</strong>, if they are local method variables and in the <strong>heap</strong> if they are member variables (i.e. fields of a class). In Java methods local variables are pushed into <strong>stack</strong>. When a method is invoked and stack pointer is decremented when a method call is completed. <br/>
+In a multi-threaded application each thread will have its own stack but will share the same heap. This is why care should be taken in your code to avoid any
+concurrent access issues in the heap space. The stack is threadsafe (each thread will have its own stack) but the heap is not threadsafe unless guarded with synchronisation through your code.
+</p>
+</div>
+<div id=""><p><strong>Q23) Explain re-entrant, recursive and idempotent methods/functions?</strong></p>
+<p>Ans) A method in stack is <strong>re-entrant</strong> allowing multiple concurrent invocations that do not interfere with each other. <br/>
+A function is <strong>recursive</strong> if it calls itself. Given enough stack space, recursive method calls are perfectly valid in Java though it is tough to debug. Recursive functions are useful in removing iterations from many sorts of algorithms. 
+<em>  Allrecursive functions are re-entrant but not all re-entrant functions are recursive.</em> 
+<strong>Idempotent methods </strong>are methods, which are written in such a way that repeated calls to the same method with the same arguments yield same results. For example clustered EJBs, which are written with idempotent methods, can automatically recover from a server failure as long as it can reach another server.
+</p></div>
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-middle -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="6388864415"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div id=""><p><strong>Q24) Can a private variable or method of a class can be accessed?</strong></p>
+<p>Ans) Yes its possible using reflection.</p>
+</div>
+<div id=""><p><strong>Q25) What is difference between static block and the init block?</strong></p>
+<p>Ans) The static block is loaded when the class is loaded by the JVM for the 1st time only whereas init {} block is loaded every time class is loaded. Also first the static block is loaded then the init block.</p>
+<pre><code class="language-java">public class LoadingBlocks {
+
+  static{
+    System.out.println("Inside static");
+  }
+  
+  {
+    System.out.println("Inside init");
+  }
+  public static void main(String args[]){
+    new LoadingBlocks();
+    new LoadingBlocks();
+    new LoadingBlocks();
+  }
+}
+
+Output:
+
+Inside static
+Inside init
+Inside init
+Inside init</code></pre>
+</div>  
+<div id=""><p><strong>Q26) Why inner class can access only final variable?</strong></p>
+<p>Ans) Local classes can most definitely reference instance variables. The reason they cannot reference non final local variables is because the local class instance can remain in memory after the method returns. When the method returns the local variables go out of scope, so a copy of them is needed. If the variables weren't final then the copy of the variable in the method could change, while the copy in the local class didn't, so they'd be out of synch.</p><p>
+Anonymous inner classes require final variables because of the way they are implemented in Java. An anonymous inner class (AIC) uses local variables by creating a private instance field which holds a copy of the value of the local variable. The inner class isn't actually using the local variable, but a copy. It should be fairly obvious at this point that a "Bad Thing"™ can happen if either the original value or the copied value changes; there will be some unexpected data synchronization problems. In order to prevent this kind of problem, Java requires you to mark local variables that will be used by the AIC as final (i.e., unchangeable). This guarantees that the inner class' copies of local variables will always match the actual values.</p>
+</div>
+<div id=""><p><strong>Q27) What is fully abstract class?</strong></p>
+<p>Ans) An abstract class which has all methods as abstract and all fields are public static final.</p>
+</div>
+<div id=""><p><strong>Q28) What is dynamic binding and static binding?</strong></p>
+<p>Ans) <strong>Method invocation</strong><br/>
+The Java programming language provides two basic kinds of methods: instance methods and class (or static) methods. The differences are:<br/>
+1.  Instance methods require an instance before they can be invoked, whereas class methods do not.<br/> 
+2.  Instance methods use <strong>dynamic (late) binding</strong>, whereas class methods use <strong>static (early) binding</strong>. </p>
+<p> When the Java virtual machine invokes a class method, it selects the method to invoke based on the type of the object reference, which is always known at compile-time. On the other hand, when the virtual machine invokes an instance method, it selects the method to invoke based on the actual class of the object, which may only be known at run time.</p></div>
+<div id=""><p><strong>Q29) What is Java Reflection?</strong> </p>
+<p>Ans)Reflection is commonly used by programs which require the ability to examine or modify the runtime behavior of applications running in the Java virtual machine.</p>
+<p><strong>Drawbacks of Reflection:</strong> Reflection is powerful, but should not be used indiscriminately. If it is possible to perform an operation without using reflection, then it is preferable to avoid using it. The following concerns should be kept in mind when accessing code via reflection. </p>
+<p><strong>Performance Overhead:</strong>  Because reflection involves types that are dynamically resolved, certain Java virtual machine optimizations can not be performed. Consequently, reflective operations have slower performance than their non-reflective counterparts, and should be avoided in sections of code which are called frequently in performance-sensitive applications. </p>
+<p><strong>Security Restrictions:</strong>  Reflection requires a runtime permission which may not be present when running under a security manager. This is in an important consideration for code which has to run in a restricted security context, such as in an Applet.</p>
+<p><strong>Exposure of Internals:</strong>  Since reflection allows code to perform operations that would be illegal in non-reflective code, such as accessing private fields and methods, the use of reflection can result in unexpected side-effects, which may render code dysfunctional and may destroy portability. Reflective code breaks abstractions and therefore may change behavior with upgrades of the platform.</p>
+</div>
+<div id=""><p><strong>Q30) When an obj is passed through a function , one can set the properties but cannot set a new memory location?</strong> </p>
+<p>Ans) It is because when u pass an object the address value is passed and stored in some new address . like if address 1234 is passed , it is stored in 4567 location. So if u change in the value of an object it will take the address from 4567 and do 1234.setXXX(). If u set the object to null it will set 4567=null.</p>
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'java-questions';
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div> <!-- dashboard -->
+<div class="col-sm-3 col-md-4">
+<div class="fb-like-box" data-href="https://www.facebook.com/InterviewQuestionsForProgrammers" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+<div style="margin: 5px; float: center;">  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop1 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="3435398011"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop2 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="4912131216"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div>
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-23729980-1', 'auto');
+ga('send', 'pageview');
+</script><footer style="background-color: #3c3d41;padding: 30px 30px;color: rgba(255,255,255,1.00);margin-bottom: 20px;border-bottom-right-radius: 6px;border-top-left-radius: 0px;border-bottom-left-radius: 6px;">
+<div class="row"><h4>Recommend Reading</h4><div class="col-md-6">
+<ul class="pages"><li><a href="java-memory-model-and-garbage-clilections.html">How java manages Memory?</a></li><li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li><li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li><li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="java-8-lambda-expressions.html">Lambdas in Java8</a></li><li><a href="java-concurrenthashmap.html">How Concurrent HashMap Works?</a></li><li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li><li><a href="log-structured-merge-trees.html">Log Structured Merge Trees</a></li></ul><p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
+</div><div class="col-md-5 animated fadeInRight"><h3>Subscribe to get latest updates.</h3><form action="//java-questions.us5.list-manage.com/subscribe/post?u=eef8f08d0222ba841685ce4e2&amp;id=3670638f6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><div id="mc_embed_signup_scroll"><div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);"></div><div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div></form></div></p></div></div></footer></body></html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Java InnerClass interview questions | Java interview questions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/><link rel="alternate" href="http://java-questions.com" hreflang="en-us" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link rel="canonical" href="https://java-questions.com/java-more-innerclass-interview-questions.html"/>
+<link href="css/prism.css" rel="stylesheet"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script>
+<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<body>
+<nav class="navbar navbar-inverse">
+<div class="container-fluid"><div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button>
+<a class="navbar-brand" href="/">Java Interview questions</a></div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav"><li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Core Java Interview<span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li><li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>   
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Jsp Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>  
+</ul></li></ul>
+<ul class="nav navbar-nav">         
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming Interview <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li> 
+</ul></li>
+<li><a href="data-structures-in-details.html">Data Structures</a></li>
+<li><a href="java-articles.html">Java-Articles</a></li><li><a href="java-books.html">Books</a></li>
+</ul></div><!--/.nav-collapse --></div><!--/.container-fluid --></nav>
+<div class="container-fluid main">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
+<ul class="nav nav-sidebar">
+<li><a href="keywords-in-java.html"><b> Java Keywords</b></a></li>
+<li><a href="keyConcepts-interview-questions.html"><b>Key Concepts</b></a></li>
+<li><a href="keyConcepts-interview-questions-1.html"><b>Key Concepts #2</b></a></li>
+<li><a href="oops-interview-questions.html"><b>OOPS in java</b></a></li>
+<li><a href="collections-interview-questions.html"><b>Java Collections#1</b></a></li>
+<li><a href="collections-interview-questions_1.html"><b>Java Collections #2</b></a></li>
+<li><a href="Exceptions-interview-questions.html"><b>Exceptions #1</b></a></li>
+<li><a href="Exceptions-interview-questions_1.html"><b>Exceptions #2</b></a></li>
+<li><a href="Threads-interview-questions.html"><b>Threads#1</b></a></li>
+<li><a href="Threads-interview1-questions.html"><b>Threads#2</b></a></li>
+<li><a href="InnerClass-interview-questions.html"><b>InnerClass</b></a></li>
+<li><a href="java-more-innerclass-interview-questions.html"><b>More InnerClass</b></a></li>
+<li><a href="Serialization-interview-questions.html"><b>Serialization</b></a></li>
+<li><a href="ImmutableClass-interview-questions.html"><b>Immutable Class</b></a></li>
+<li><a href="Cloning-interview-questions.html"><b>Cloning in Java</b></a></li>
+<li><a href="garbagecollection-interview-questions.html"><b>Garbage Collection</b></a></li>
+<li><a href="jsp-interview-questions.html"><b>JSP #1</b></a></li>
+<li><a href="more-jsp-interview-questions.html"><b>JSP #2</b></a></li>
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
+</ul></div>
+<div class="col-sm-6 col-md-6">
+<h1>Java Innerclass Interview Questions</h1>
+          
+<div><p><strong>Q11) How to create an inner class instance from outside the outer class instance code?</strong></p>
+<p> Ans) <strong>To create an instance of the inner class you must have the instance of its enclosing class</strong>.
+<pre><code class="language-java">class EnclosingOuter {
+	class Inner{ }
+}</code></pre>
+<strong>To create the instance of inner class from
+class other than the enclosing class.</strong>
+<pre><code class="language-java">1) class OtherThanOuter{
+	EnclosingOuter out = new EnclosingOuter();
+	EnclosingOuter.Inner in = out.new Inner();
+}
+
+2) class OtherThanOuter{
+	EnclosingOuter.Inner out = new EnclosingOuter.Inner (); 
+	}</code></pre></p>
+</div>
+<div>
+<p><strong>Q13) Which modifiers can be applied to the inner class?</strong></p>
+<p> Ans) Following are modifiers that can be applied to the inner:
+<ul>
+<li>public</li>
+<li>private</li>
+<li>abstract</li>
+<li>final</li>
+<li>protected</li>
+<li>strictfp</li>
+<li>static &ndash; turns the inner class into</li>
+<li>static nested class.</li>
+</ul>
+</p>
+</div>	
+<div><p><strong>Q14) Can the method local inner class object access method&rsquo;s local variables?</strong></p>
+<p>Ans) No, a method local inner class object can not access the method local variable.</p>
+<p><strong>Reason</strong>: The local variables are not guaranteed to live as long as the local inner class object. The method local variable live on stack and exist only till the method lives, their scope is limited only code inside the method they are declared in. But the local inner class object created within the method lives on heap and it may exist even after the method ends if in case the reference of this local inner class is passed into some other code
+and is stored in an instance variable. So we can not be sure that the local variables will live till the method local inner class object lives, therefore the method local inner class object can not access the method local variable. To access the method local variables, the variable has to be declared as final.</p></div>
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="6388864415"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div><p><strong>Q15) Can a method local inner class access the local final variables?Why?</strong></p>
+<p>Ans) Yes. Because the final variables are stored on heap and live as long as the method local inner class object may live.</p></div>	
+<div><p><strong>Q16) Which modifiers can be applied to the method local inner class?</strong></p>
+<p>Ans) Only abstract or final keyword isallowed.</p></div>
+<div><p><strong>Q17) Can a local class declared inside a static method have access
+to the instance members of the outer class?</strong></p> 
+<p>Ans) No. There is no this reference available in the static method .The static method class can not have access to any members of the outer class other than static members.</p>
+</div>
+<div><p><strong>Q18) Can a method which is not in the definition of the superclass of an anonymous class be invoked on that anonymous class reference?</strong></p>
+<p>Ans) No. Compilation will fail.As the reference variable type of the anonymous class will be of superclass which will not know of any method defined inside the anonymous class the compilation will fail.</p>
+<pre><code class="language-java">class SuperClass{
+	void doSomething() {
+	  System.out.println("In the Super class");
+	}
+}
+class hasAnonymous{
+	SuperClass anon = new SuperClass(){
+	void doSomething() {
+	  System.out.println("In the Anonymous class");
+	}
+
+	void doStuff() {
+	 System.out.println("An Anonymous class method not present in
+	 superClass");
+	}
+};
+
+public void doIt(){
+	anon.doSomething(); // legal superClass has this method
+	anon.doStuff(); // Not legal }
+}
+</code></pre>
+<p>The above code does not compile as the superClass does not know about the anonymous class method doStuff().</p></div>
+<div><p><strong>Q19) Can an anonymous class define method of its own?</strong></p>
+<p>Ans) Yes. But there will be no way by which the methods defined in the anonymous class which are not present in its superclass be invoked. As only those methods which are defined in the suprclass which the anonymous class extends be invoked defining the methods in the anonymous class will be of no use.</p></div>	
+<div><p><strong>Q20) Can an anonymous class implement an interface and also extend a class at the same time?</strong></p><p>Ans) No. An anonymous class can either extend a class or implement a single interface. If the anonymous class is extending a class then it becomes the implementer of all the interfaces implemented by its superclass automatically.</p></div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+var disqus_shortname = 'java-questions';
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div> <!-- dashboard -->
+<div class="col-sm-3 col-md-4">
+<div class="fb-like-box" data-href="https://www.facebook.com/InterviewQuestionsForProgrammers" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+<div style="margin: 5px; float: center;">  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop1 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="3435398011"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop2 -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4267874373737812"
+data-ad-slot="4912131216"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div></div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-23729980-1', 'auto');
+ga('send', 'pageview');
+</script><footer style="background-color: #3c3d41;padding: 30px 30px;color: rgba(255,255,255,1.00);margin-bottom: 20px;border-bottom-right-radius: 6px;border-top-left-radius: 0px;border-bottom-left-radius: 6px;">
+<div class="row"><h4>Recommend Reading</h4><div class="col-md-6">
+<ul class="pages"><li><a href="java-memory-model-and-garbage-clilections.html">How java manages Memory?</a></li><li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li><li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li><li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="java-8-lambda-expressions.html">Lambdas in Java8</a></li><li><a href="java-concurrenthashmap.html">How Concurrent HashMap Works?</a></li><li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li><li><a href="log-structured-merge-trees.html">Log Structured Merge Trees</a></li></ul><p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
+</div><div class="col-md-5 animated fadeInRight"><h3>Subscribe to get latest updates.</h3><form action="//java-questions.us5.list-manage.com/subscribe/post?u=eef8f08d0222ba841685ce4e2&amp;id=3670638f6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate><div id="mc_embed_signup_scroll"><div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);"></div><div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div></form></div></p></div></div></footer></body></html>

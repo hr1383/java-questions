@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!--
+Copyright: Darren Hester 2006, http://www.designsbydarren.com
+License: Released Under the "Creative Commons License", 
+http://creativecommons.org/licenses/by-nc/2.5/
+-->
+
+<head>
+
+<!-- meta Data -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/><link rel="alternate" href="http://java-questions.com" hreflang="en-us" />
+<title>Spring Overview | Dependency Injection</title>
+<meta name="keywords" content="dependency injection,spring tuorial,spring basic tutorial,spring basic concepts"/>
+
+
+<!-- Site Title -->
+
+<meta content=EN name=language>
+
+<meta content="Harshit rastogi" name=author>
+
+<meta content=java-questions.com name=copyright>
+
+<meta content="Information Technology" name=document-classification>
+
+<meta content=Public name=document-type>
+
+<meta content="Safe for Kids" name=document-rating>
+
+<meta content=Global name=document-distribution>
+
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+
+<meta http-equiv=Content-Language content=en-us>
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+<!-- Link to Style External Sheet -->
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+
+<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+
+<body>
+
+<div id="page_wrapper">
+
+<div id="header_wrapper">
+
+<div id="header">
+
+<h1>Interview<font color="#FFDF8C">Questions</font></h1>
+<h2>Java Threads,Collections,Jsp,Spring,Hibernate</h2>
+
+</div>
+
+<div id="navcontainer">
+
+<ul id="navlist">
+
+<li id="active"><a href="#" id="current">Java</a></li>
+<li><a href="jsp_interview_questions.html">JSP</a></li>
+
+<li><a href="tutorials.html">Tutorials</a></li>
+</ul>
+</div>
+
+</div>
+
+<div id="left_side">
+
+<h3>Interview Questions</h3>
+ <table border="1" style="border-color:Blue;font-size:15px;border-bottom-color:Blue" rules="rows" cellpadding="5px">
+<tr><td><a href="keywords-in-java.html" style="letter-spacing: 1px;"><b> Java Keywords</b></a></td></tr>
+<tr><td><a href="keyConcepts-interview-questions.html" style="letter-spacing: 1px;"><b>Key Concepts</b></a></td></tr>
+<tr><td><a href="keyConcepts-interview-questions-1.html" style="letter-spacing: 1px;"><b>Key Concepts #2</b></a></td></tr>
+<tr><td><a href="oops-interview-questions.html" style="letter-spacing: 1px;"><b>OOPS in java</b></a></td></tr>
+<tr><td><a href="collections-interview-questions.html" style="letter-spacing: 1px;"><b>Java Collections#1</b></a></td></tr>
+<tr><td><a href="collections-interview-questions_1.html" style="letter-spacing: 1px;"><b>Java Collections #2</b></a></td></tr>
+<tr><td><a href="Exceptions-interview-questions.html" style="letter-spacing: 1px;"><b>Exceptions #1</b></a></td></tr>
+<tr><td><a href="Exceptions-interview-questions_1.html" style="letter-spacing: 1px;"><b>Exceptions #2</b></a></td></tr>
+<tr><td><a href="Threads-interview-questions.html" style="letter-spacing: 1px;"> <b>Threads#1</b></a></td></tr>
+<tr><td><a href="Threads-interview1-questions.html" style="letter-spacing: 1px;"> <b>Threads#2</b></a></td></tr>
+<tr><td><a href="InnerClass-interview-questions.html" style="letter-spacing: 1px;"> <b>InnerClass</b></a></td></tr>
+<tr><td><a href="Serialization-interview-questions.html" style="letter-spacing: 1px;"><b>Serialization</b></a></td></tr>
+<tr><td><a href="ImmutableClass-interview-questions.html" style="letter-spacing: 1px;"><b>Immutable Class</b></a></td></tr>
+<tr><td><a href="Cloning-interview-questions.html" style="letter-spacing: 1px;"><b>Cloning in Java</b></a></td></tr>
+<tr><td><a href="garbagecollection-interview-questions.html" style="letter-spacing: 1px;"><b>Garbage Collection</b></a></td></tr>
+<tr><td><a href="jsp-interview-questions.html" style="letter-spacing: 1px;"><b>JSP #1</b></a></td></tr>
+<tr><td><a href="more-jsp-interview-questions.html" style="letter-spacing: 1px;"><b>JSP #2</b></a></td></tr>
+<tr><td><a href="programming-questions1.html" style="letter-spacing: 1px;"><b>Programming Q#1</b></a></td></tr>
+<tr><td><a href="programming-questions2.html" style="letter-spacing: 1px;"><b>Programming Q#2</b></a></td></tr>
+<tr><td><a href="programming-questions3.html" style="letter-spacing: 1px;"><b>Programming Q#3</b></a></td></tr>
+
+</table>
+
+
+<br/>
+<br/>
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4267874373737812";
+/* left bottom */
+google_ad_slot = "7984960609";
+google_ad_width = 100;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+
+<div id="right_side">
+
+<table>
+<tr>
+<td>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4267874373737812";
+/* 1st right */
+google_ad_slot = "7954940046";
+google_ad_width = 120;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td>
+</tr>
+<tr>
+
+</tr>
+<tr>
+<td>
+
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4267874373737812";
+/* 2nd right top */
+google_ad_slot = "4368368596";
+google_ad_width = 120;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td>
+</tr>
+</table>    
+
+</div>
+
+<div id="content">
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4267874373737812";
+/* single line */
+google_ad_slot = "1619694848";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+
+<div class='featurebox_center'>
+<h2> Dependency Injection <g:plusone></g:plusone></h2>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11"><strong>Dependency Injection (DI)</strong>: is a way to let the framework or the container work out the complexities of bean instantiation, initialization and sequencing and supplies the bean references to the clients as required. In spring, IOC container has the responsibility of doing DI.<br/> 
+Consider a simple example:</span></span></p><br/>
+<p  style="margin:0;"><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">public</span></strong><span style="font-size:11pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">interface</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> Vehicle {</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>                </span><span> </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">void</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> displayData();</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">}</span></p><br/>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11">A FourWheeler class implements Vehicle interface.</span></span></p>
+<br/>
+<p  style="margin:0;"><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">public</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">class</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> FourWheeler </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">implements</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> Vehicle {</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;font-family:Times New Roman;"> </span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">private</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> String </span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">name</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">private</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">int</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">purchaseValue</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">private</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">int</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">noOfTyres</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">public</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> FourWheeler(){}<span>  </span><span>                        </span></span><span style="font-size:10pt;color:#3f7f5f;font-family:Times New Roman;">// default constructor<span>              </span><span>      </span></span></p>
+<p ><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">public</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> FourWheeler(String name, </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">int</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> purchaseValue, </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">int</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> noOfTyres) {</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">super</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;">();</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">this</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;">.</span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">name</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> = name;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">this</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;">.</span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">purchaseValue</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> = purchaseValue;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">this</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;">.</span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">noOfTyres</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> = noOfTyres;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span>}</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">public</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">void</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> displayData() {</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span>System.</span><em><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">out</span></em><span style="font-size:10pt;color:black;font-family:Times New Roman;">.println(</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">" Name of vehicle is "</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">+ </span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">name</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">);</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span>System.</span><em><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">out</span></em><span style="font-size:10pt;color:black;font-family:Times New Roman;">.println(</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"Purchase Value is "</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> +</span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">purchaseValue</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">);</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span>System.</span><em><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">out</span></em><span style="font-size:10pt;color:black;font-family:Times New Roman;">.println(</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"Tyres the vehicle has "</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> +</span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">noOfTyres</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">);</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span>}</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">public</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> String getName() {</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">return</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">name</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span>}</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">public</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">void</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> setName(String name) {</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">this</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;">.</span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">name</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> = name;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span>}</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">public</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">int</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> getPurchaseValue() {</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">return</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">purchaseValue</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span>}</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">public</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">void</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> setPurchaseValue(</span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">int</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> purchaseValue) {</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">this</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;">.</span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">purchaseValue</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> = purchaseValue;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span>}</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">public</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">int</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> getNoOfTyres() {</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">return</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">noOfTyres</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span>}</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">public</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">void</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> setNoOfTyres(</span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">int</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> noOfTyres) {</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">this</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;">.</span><span style="font-size:10pt;color:#0000c0;font-family:Times New Roman;">noOfTyres</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> = noOfTyres;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span>}</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">}</span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11"> </span></span></p><br/>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11">The different ways in which the class can be instantiated using DI in spring.xml:<br/><br/>
+
+1) <strong>Setter based injection</strong>: The values of the properties of the class are set with the help of setter. Each class needs to declare the setter of the properties and their values are set from the spring configuration file.</span></span></p><br/>
+ </span></span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;?xml version=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"1.0"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> encoding=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"UTF-8"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">?&gt;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;!DOCTYPE beans PUBLIC </span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"-//SPRING//DTD BEAN//EN"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"http://www.springframework.org/dtd/spring-beans.dtd"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">&gt;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;beans&gt;<span>       </span></span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span><span> </span>&lt;bean id=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"fourWheeler"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">class</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;">=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"com.src.FourWheeler"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">&gt;<span>  </span></span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span>&lt;property name=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"noOfTyres"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">&gt;</span></p>
+<p  style="text-indent:.3in;margin:0 0 0 .1in;;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"> &lt;value&gt;4&lt;/value&gt;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span><span>      </span>&lt;/property&gt;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span><span> </span><span>     </span></span></p>
+<p  style="margin:0 0 0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;property name=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"name"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> value=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"Honda"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">/&gt; <span>                      </span><span>         </span><span>   </span></span></p>
+<p  style="margin:0 0 0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;property name=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"purchaseValue"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> value=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"900000"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">/&gt;<span>   </span></span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span>&lt;/bean&gt;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;/beans&gt;</span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11"><span> </span></span></span></p><br/>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11">In above example the setter methods are created for noOfTyres, name, purchaseValue in FourWheeler <span> </span>class and the values are set using <em>&lt;property&gt; &lt;value&gt;</em> tag in xml file.</span></span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11">Note that for each property the value is set using a different syntax. All syntaxes are valid and can be used depending on the programmer liking. In this declaration the default constructor of class is called.</span></span></p><br/>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11">2) <span> </span><strong>Constructor Based injection</strong>: In this case the values are set using constructor of the java class. The call to constructor is made from the xml file using <em>&lt;constructor-arg&gt;.</em><span>  </span>For the above mentioned java class constructor injection will be:</span></span></p><br/>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;?xml version=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"1.0"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> encoding=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"UTF-8"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">?&gt;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;!DOCTYPE beans PUBLIC </span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"-//SPRING//DTD BEAN//EN"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"http://www.springframework.org/dtd/spring-beans.dtd"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">&gt;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;beans &gt;<span>       </span></span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span></span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span>&lt;bean id=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"fourWheeler"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">class</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;">=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"com.src.FourWheeler"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">&gt;<span>  </span></span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span><span>       </span><span>           </span>&lt;constructor-arg&gt; index=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"0"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> value=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"Honda"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">/&gt;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span><span>       </span><span>           </span>&lt;constructor-arg type=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"Integer"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">&gt;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span><span>       </span><span>                 </span>&lt;value&gt;900000&lt;/value&gt;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span><span>    </span><span>        </span>&lt;/constructor-arg&gt;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span>&lt;/bean&gt;<span>     </span></span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;/beans&gt;</span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11"> </span></span></p>
+<br/>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11">In the above example the values to the bean is passed using </span></span><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;constructor-arg&gt;. </span><span style="font-family:Times New Roman;"><span class="ws11">The sequence in which the parameters are passed should match with the constructor available in the class.</span></span></p><br/>
+<p  style="margin:0;"><span class="ws11"><span style="font-family:Times New Roman;">3) <strong>Static factory method: </strong></span><span style="font-family:Times New Roman;" lang="EN">In the less common case where the container invokes a static, <em>factory</em> method on a class to create the bean, the class property specifies the actual class containing the static factory method that is to be invoked to create the object (the type of the object returned from the invocation of the static factory method may be the same class or another class entirely.</span></span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;" lang="EN"><span class="ws11"> </span></span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;" lang="EN"><span class="ws11">Consider the following method present in FourWheeler class:</span></span></p><br/>
+<p  style="margin:0;"><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">public</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> static TwoWheeler <span style="background:silver;">createInstance</span>(){</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">return</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">new</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> TwoWheeler();</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span>}</span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;" lang="EN"><span class="ws11"> </span></span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;" lang="EN"><span class="ws11">Note that the method has to be static. And following line of code in xml:</span></span></p><br/>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;bean id=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"twoWheeler"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">class</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;">=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"com.src.FourWheeler"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> factory-method=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"createInstance"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">/&gt;</span></p><br/>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11"> </span></span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11">After execution of the above line twoWheleler bean will represent the TwoWheeler object which is created by calling the function from FourWheeler Class. The attribute factory-method tells which method to call present in the class mentioned. This scenario could possibly use in cases where Factory pattern is required.</span></span></p><br/>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11"> </span></span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11">4)<strong> Instance Factory method:</strong> In this case instead of having a static method a non-static method is present to create the object.</span></span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11"><span> </span></span></span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;" lang="EN"><span class="ws11">Consider the following method present in FourWheeler class:</span></span></p><br/>
+<p  style="margin:0;"><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">public</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> TwoWheeler <span style="background:silver;">createInstance</span>(){</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>            </span></span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">return</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">new</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;"> TwoWheeler();</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"><span>      </span>}</span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;" lang="EN"><span class="ws11"> </span></span></p><br/>
+<p  style="margin:0;"><span style="font-family:Times New Roman;" lang="EN"><span class="ws11">Note that the method need not be static. And following line of code in xml:</span></span></p><br/>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;bean id=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"parentfourWheeler"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span><strong><span style="font-size:10pt;color:#7f0055;font-family:Times New Roman;">class</span></strong><span style="font-size:10pt;color:black;font-family:Times New Roman;">=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"com.src.FourWheeler"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">/&gt;</span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;"> </span></p>
+<p  style="margin:0;"><span style="font-size:10pt;color:black;font-family:Times New Roman;">&lt;bean id=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"fourWheeler"</span><span style="font-size:10pt;color:black;font-family:Times New Roman;"> factory-bean = â€œ</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">parentFourWheeler</span><span style="font-size:10pt;color:black;font-family:Times New Roman;">â€? factory-method=</span><span style="font-size:10pt;color:#2a00ff;font-family:Times New Roman;">"createInstance" </span><span style="font-size:10pt;color:black;font-family:Times New Roman;">/&gt;</span></p><br/>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11"> </span></span></p>
+<p  style="margin:0;"><span style="font-family:Times New Roman;"><span class="ws11">Here the twoWheeler object is created from a non-static method of class FourWheeler.</span></span></p><br/><br/>
+</div></div></div>
+</div>
+
+<div id="footer">
+<a href="www.technologiquepanorama.wordpress.com">My Blog</a> | 
+<a href="contact.html">Contact</a> | 
+<a href="sitemap.xml">SiteMap</a> | 
+<br/>
+Template provided by: 
+<a href="http://www.designsbydarren.com" target="_blank">DesignsByDarren.com</a>
+</div>
+
+</div>
+<script type="text/javascript"> 
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23729980-1']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script></body> 
+
+</html>
