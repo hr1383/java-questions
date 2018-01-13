@@ -1,22 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head>
-<title>Difference between equals method and equality operator in java</title>
-<meta name="description" content="Difference between java equals method and equality operator in java"/>
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Word Break problem</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
-<link rel="canonical" href="http://java-questions.com/difference-between-equals-method-and-equality-operator-java.html"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="check balance binary tree"/>
+<link rel="canonical" href="http://java-questions.com/word-break.html"/>
+<meta name="keywords"  content="balanced,binary tree" />
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
-<link href="css/prism.css" rel="stylesheet"/>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="css/prism.css" rel="stylesheet"/><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async defer></script>
-<script type="text/javascript" src="js/prism.js" async="async"></script></head>
-<body>
-<nav class="navbar navbar-inverse">
+<script type="text/javascript" src="js/prism.js" async="async"></script></head><body><nav class="navbar navbar-inverse">
 <div class="container-fluid"><div class="navbar-header">
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 <span class="sr-only">Toggle navigation</span>
 <span class="icon-bar"></span>
-<span class="icon-bar"></span>
+`<span class="icon-bar"></span>
 <span class="icon-bar"></span></button>
 <a class="navbar-brand" href="/">Java Interview questions</a></div>
 <div id="navbar" class="navbar-collapse collapse">
@@ -49,8 +46,15 @@
 <ul class="nav navbar-nav">         
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Programming Interview <span class="caret"></span></a>
-<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"><li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li><li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li><li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li></ul></li><li><a href="data-structures-in-details.html">Data Structures</a></li><li><a href="java-articles.html">Java-Articles</a></li><li><a href="java-books.html">Books</a></li>
-</ul></div><!--/.nav-collapse --></div><!--/.container-fluid --></nav>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+<li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
+<li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
+<li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li> 
+</ul></li>
+<li><a href="data-structures-in-details.html">Data Structures</a></li>
+<li><a href="java-articles.html">Java-Articles</a></li>
+<li><a href="java-books.html">Books</a></li>
+</ul></div></div></nav>
 <div class="container-fluid main">
 <div class="row">
 <div class="col-sm-3 col-md-2 sidebar">
@@ -76,55 +80,82 @@
 <li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
 <li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
 <li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
-</ul>
-</div>
+</ul></div>
 <div class="col-sm-6 col-md-6">
-<h1>Difference between equals method and equality operator in java</h1>
+<h1>Word Break Problem</h1>
+<p><i>Leetcode: Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, add spaceGiven a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words. You may assume the dictionary does not contain duplicate words..</i></p>
+<p>Return all such possible sentences.</p>
+<p>For example, given</p>
+<p><code>s = "catsanddog"</code></p>
+<p><code>dict = ["cat", "cats", "and", "sand", "dog"].</code></p>
+<p><code>returns true</code></p>
+<div><p>The problem can be solved using Dynamic Programming.</p>
+<img src="/img/wordbreak.png"/>
+<ol><li>Start traversing the string from index 0. At index 0 , substring 'c' is not in dict.</li>
+<li>Substring <code>ca</code> is not in dict</li>
+<li>Substring <code>cat</code> is in dict. Now there is two possibility as it can be seen in the diagram. consider <code>cat</code> as part of answer and traverse forward with substring <code>sanddog</code> and ignore <code>cat</code> and look for next substring which is <code>cats</code>.</li>
+<li>Follow above steps till the end of the string. If by the end of string, it can be split into multiple words then return true</li></ol>
+<p>Note: If we follow above approach then same subproblems will be evaluated multiple times. This can be avoided by mapping out the iteration on a 2d array.</p>
+<ol><li>Create boolean 2d array of size mat[n][n]</li>
+<li>Start a for loop <code>l = 1...n</code>. The value of l defines the length of the prefix</li>
+<li>Start from <code>i=0... s.length()-l+1</code> and set value of <code>j= i+l-1</code></li>
+<li>Get substring of length <code>i..j</code>. If the substring is present in dict mark <code>mat[i][j] = true</code></li>
+<li>If the prefix is present in the dict mark <code>mat[i][j]=true</code></li>
+<li>if not then for <code>k=i..j</code>  set <code>mat[i][j] = true if mat[i][k]=true && mat[k][j] = true</code></li>
+<li>After iterating through all prefixes return <code>mat[0][n-1]</code></li></ol>
+<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4267874373737812" data-ad-slot="7600236816"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<pre><code class="language-java">public class WordBreak {
 
-<p>Ans) == operator is binary operator used to compare the primitives and objects in java. Primitives such as <i>int</i>, <i>float</i>, <i>boolean</i> can use <i>==</i> to compare the values of primitive variables. But if <i>==</i> is used for comparing objects, then it compares the references of the object, <i>==</i> will return only true when two objects point to same memory location in JVM. <br/></p>
-<div><span class="pull-right"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-style="display:inline-block;width:300px;height:250px"
-data-ad-client="ca-pub-4267874373737812"
-data-ad-slot="6388864415"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></span></div>
-<span><b>public boolean equals (Object o)</b> is the method provided by the Object class. By default, the equals() method actually behaves the same as the "=="" operator, meaning it checks to see if both objects reference the same place in memory. But since the method can be overriden like for String class. equals() method can be used to compare the actual values of two objects. For e.g. <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html">String class</a> overrides <a href="http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/6-b14/java/lang/String.java#String.equals%28java.lang.Object%29">equals</a> method to compare the actual values.
-Default implementation of equals method in String class.</span></div>
-<pre><code class="language-java">//implementation of String.class equals() method
-public boolean equals(Object anObject) {
-    if (this == anObject) {
-        return true;
-    }
-    if (anObject instanceof String) {
-        String anotherString = (String) anObject;
-        int n = value.length;
-        if (n == anotherString.value.length) {
-            char v1[] = value;
-            char v2[] = anotherString.value;
-            int i = 0;
-            while (n-- != 0) {
-                if (v1[i] != v2[i])
-                        return false;
-                i++;
-            }
-            return true;
+  public static void main(String[] args) {
+    List<String> dict = new ArrayList<>();
+    dict.add("cat");
+     dict.add("cats");
+     dict.add("and");
+     dict.add("sand");
+     dict.add("dog");
+     System.out.println(new WordBreak().wordbreak("catsanddog", dict));
+  }
+
+  public boolean wordbreak(String words, List<String> dict) {
+    boolean mat[][] = new boolean[words.length()][words.length()];
+    for (int i = 0; i < words.length(); i++)
+      mat[i][i] = dict.contains(words.charAt(i)+"");
+    for (int l = 2; l <= words.length(); l++) {
+      for (int i = 0; i < words.length() - l + 1; i++) {
+        int j = i + l - 1;
+        if (dict.contains(words.substring(i, j+1))) {
+          mat[i][j] = true;
+          continue;
         }
+        for (int k = i; k < j; k++) {
+          if (mat[i][k] == true && mat[k+1][j] == true) {
+            mat[i][j] = true;
+            continue;
+          }
+        }
+      }
     }
-    return false;
-}</code></pre></p> 
-It is advisable, to override the equals method(<a href="http://java-questions.com/java-hashcode-and-equals.html"> Why to override</a>) in most of the user defined java objects.
-<pre><code class="language-java">String str1 = "MyName"; 
-String str2 = "MyName";
-String str3 = str2;
-String str4 = new String("MyName");
-
-str1 == str2 // true
-str1 == str3 //true
-str1 == str4 //false
-str1.equals(str2) //true
-str1.equals(str3) //true
-str1.equals(str4) //true
-</code></pre>
-The third case returns false , since new String("MyName") , create a new variable at different memory location.
+    return mat[0][words.length() - 1];
+  }
+}</pre></code>
+<p>The time complexity of above solution is <code>O(n^3)</code>. This can be optimized too.</p>
+<pre><code class="language-java">public class Solution {
+   
+  public boolean wordBreak(String s, List&lt;String&gt; wordDict) {
+    boolean[] f = new boolean[s.length() + 1];
+    f[0] = true;
+    for (int i = 1; i <= s.length(); i++) {
+      for (int j = 0; j&lt;i; j++) {
+        if (f[j] && wordDict.contains(s.substring(j, i))) {
+          f[i] = true;
+          break;
+        }
+      }
+    }
+    return f[s.length()];
+  }
+}</code></pre></div>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
 var disqus_shortname = 'java-questions';
@@ -133,27 +164,28 @@ var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.as
 dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
+</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div> <!-- dashboard -->
 <div class="col-sm-3 col-md-4">
- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<div class="fb-like-box" data-href="https://www.facebook.com/InterviewQuestionsForProgrammers" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+<div style="margin: 5px; float: center;">  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- new-righttop1 -->
 <ins class="adsbygoogle"
 style="display:inline-block;width:300px;height:600px"
 data-ad-client="ca-pub-4267874373737812"
 data-ad-slot="3435398011"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script></div>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new-righttop2 -->
 <ins class="adsbygoogle"
 style="display:inline-block;width:300px;height:600px"
 data-ad-client="ca-pub-4267874373737812"
 data-ad-slot="4912131216"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script></div></div></div><script>
+</script></div>  </div></div><script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -186,4 +218,4 @@ ga('send', 'pageview');
 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);">
 </div>
 <div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div>
-</form></div></p></div></div></footer></body></html></body></html>
+</form></div></p></div></div></footer></body></html>

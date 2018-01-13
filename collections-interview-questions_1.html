@@ -89,17 +89,14 @@
 Comparator comp = Collections.reverseOrder();
 Collections.sort(list, comp)</code></pre></p>
 </div>
-<div id=""><strong><p> Q) Can a <code>null</code> element be added to a Treeset or HashSet?</p></strong>
+<div id=""><strong><p>Q) Can a <code>null</code> element be added to a Treeset or HashSet?</p></strong>
 <p>Ans) A <code>null</code> element can be added only if the set is of size 1 because when a second element is added then as per set definition a check is made to check duplicate value and comparison with null element will throw NullPointerException.<br/>HashSet is based on hashMap and can contain null element.</p></div>
+<div id=""><p><strong>Q) What are advantages of iterating a collection using iterator?</strong></p>
+<p> Ans) For loop does not allow updating the colection(add or remove) whereas Iterator does allow modifying the collection. Also Iterator can be used where there is no clue what type of collections will be used because all collections implement Iterator interface.</p></div>
 <div id=""><strong><p> Q) How to sort a list of strings - case insensitive ?</p></strong>
 <p> Ans)  <code>Collections.sort(list, String.CASE_INSENSITIVE_ORDER);</code></p></div>
 <div id=""><p><strong>Q) How to make a List (ArrayList,Vector,LinkedList) read only ?</strong></p>
 <p>Ans) A list implemenation can be made read only using <strong>Collections.unmodifiableList(list)</strong>. This method returns a new list. If a user tries to perform add operation on the new list; UnSupportedOperationException is thrown.</p></div>
-<div id=""><p><strong>Q) Arrange in the order of speed - HashMap, HashTable, Collections.synchronizedMap, ConcurrentHashmap.</strong></p>
-<p>Ans) HashMap is fastest, ConcurrentHashMap, Collections.synchronizedMap, HashTable.</p></div>
-<div id=""><p><strong>Q) What is WeakHashMap?</strong></p>
-<p>Ans) A hashtable-based Map implementation with weak keys. An entry in a WeakHashMap will automatically be removed when its key is no longer in ordinary use. More precisely, the presence of a mapping for a given key will not prevent the key from being discarded by the garbage collector, that is, made finalizable, finalized, and then reclaimed. When a key has been discarded its entry is effectively removed from the map, so this class behaves somewhat differently than other Map implementations.</p>
-</div>
 <div><p><b>Recommend Reading</b></p>
 <ol style="list-style-type:none">
 <li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
