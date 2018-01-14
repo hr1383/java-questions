@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <link href="css/prism.css" rel="stylesheet"/>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async defer></script>
 <script type="text/javascript" src="js/prism.js" async="async"></script></head>
 <body><nav class="navbar navbar-inverse">
 <div class="container-fluid"><div class="navbar-header">
@@ -100,7 +100,7 @@
 <li>Threads can exercise considerable control over threads of the same process; processes can only exercise control over child processes.</li>
 <li>Changes to the main thread (cancellation, priority change etc.) may affect the behavior of the other threads of the process; changes to  the parent process do not affect child processes.</li></ul>  
 </div>
-<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4267874373737812" data-ad-slot="7600236816"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
 <div id=""><p><strong>Q3) What are the advantages or usage of threads?</strong></p>
 <p>Ans)<strong>Threads support concurrent operations. For example,<br/></strong>&bull; Multiple requests by a client on a server can be handled as an individual client thread.<br/>&bull; Long computations or high-latency  disk and network operations can be handled in the background without disturbing  foreground computations or screen updates. <br/><br/><strong>Threads often result in simpler programs.<br/></strong>&bull; In sequential programming,  updating multiple displays normally requires a big while-loop that performs  small parts of each display update. Unfortunately, this loop basically  simulates an operating system scheduler. In Java, each view can be assigned a thread to provide continuous updates.<br/>&bull; Programs that need to respond to  user-initiated events can set up service routines to handle the events without  having to insert code in the main routine to look for these events.<br/><br/><strong>Threads provide a high degree of control.<br/></strong>&bull; Imagine launching a complex  computation that occasionally takes longer than is satisfactory. A  &quot;watchdog&quot; thread can be activated that will &quot;kill&quot; the computation  if it becomes costly, perhaps in favor of an alternate, approximate solution. Note  that sequential programs must muddy the computation with termination code,  whereas, a Java program can use thread control to non-intrusively supervise any  operation. <br/><br/><strong>Threaded applications exploit parallelism.<br/></strong>&bull; A computer with multiple CPUs can  literally execute multiple threads on different functional units without having  to simulating multi-tasking (&quot;time sharing&quot;).<br/>&bull; On some computers, one CPU  handles the display while another handles computations or database accesses,  thus, providing extremely fast user interface response times.</p>
@@ -202,7 +202,7 @@ If the start() method is not invoked and the run() method is directly called on 
 var disqus_shortname = 'java-questions';
 (function() {
 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
 </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
@@ -217,14 +217,14 @@ dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 <li><a href="java-singleton-class.html">How to create a Singleton class in Java?</a></li>
 <li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li></ul></div>
 <div style="margin: 5px; float: center;">  
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- new-righttop1 -->
 <ins class="adsbygoogle"
 style="display:inline-block;width:300px;height:600px"
 data-ad-client="ca-pub-4267874373737812"
 data-ad-slot="3435398011"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- new-righttop2 -->
 <ins class="adsbygoogle"
 style="display:inline-block;width:300px;height:600px"
@@ -236,7 +236,7 @@ data-ad-slot="4912131216"></ins>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-23729980-1', 'auto');
 ga('send', 'pageview');
 </script><footer style="background-color: #3c3d41;padding: 30px 30px;color: rgba(255,255,255,1.00);margin-bottom: 20px;border-bottom-right-radius: 6px;border-top-left-radius: 0px;border-bottom-left-radius: 6px;">

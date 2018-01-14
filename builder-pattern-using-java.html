@@ -9,8 +9,8 @@
 
 <link href="css/prism.css" rel="stylesheet"/>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script>
 <script type="text/javascript" src="js/prism.js" async="async"></script></head><body>
 <nav class="navbar navbar-inverse">
 <div class="container-fluid">
@@ -141,7 +141,7 @@ Book book = new Book("Learn java", "james", "TMH", new Date(02/13/2001), null, "
 </code></pre>
 <p> To create objects </p>
 <p> In the 3rd case you end up passing parameter which is not required. This may not look bad with 6 parameters, but imagine having 10 parameters and passing "" or null for the optional fields. Also passing the parameters in such a fashion is a recipe for introducing bugs in the code. For e.g one could forgot to pass one parameter and the constructor is still present or passing the parameters in wrong order.</p>
-<div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
 style="display:inline-block;width:300px;height:250px"
 data-ad-client="ca-pub-4267874373737812"
@@ -189,7 +189,7 @@ b.setPusblisher("TMH");
 <br/>
 <div>
 <p class="pull-left"> There is third way that combines the advantages of the telescopic constructor pattern and readability of the JavaBeans pattern. It is <b><i> Builder Pattern</i></b> The client calls the constructor with all of required parameters and gets a builder object. Then the client calls the setter like method on the builder object to set each optional field. Finally client calls a parameterless build method to generate the object which is immutable. The builder is static member class of the class it builds. Here is how code looks: </p>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
 style="display:inline-block;width:300px;height:250px"
 data-ad-client="ca-pub-4267874373737812"
@@ -263,7 +263,7 @@ Book book = new Book.Builder("Learn java", "james", "TMH", new Date(02/13/2001))
 var disqus_shortname = 'java-questions';
 (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
 </script>
@@ -271,7 +271,7 @@ var disqus_shortname = 'java-questions';
 </div>
 <div class="col-sm-3 col-md-4">
 <div style="margin: 5px; float: center;">  
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- new-righttop1 -->
 <ins class="adsbygoogle"
 style="display:inline-block;width:300px;height:600px"
@@ -280,7 +280,7 @@ data-ad-slot="3435398011"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
 style="display:inline-block;width:300px;height:600px"
 data-ad-client="ca-pub-4267874373737812"
@@ -291,7 +291,7 @@ data-ad-slot="4912131216"></ins>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-23729980-1', 'auto');
 ga('send', 'pageview');
 </script>
