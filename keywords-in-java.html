@@ -1,15 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Top Keywords in Java</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Top Java Keywords</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 <link rel="alternate" href="http://java-questions.com" hreflang="en-us"/>
-<link rel="canonical" href="https://java-questions.com/keywords-in-java.html"/>
+<link rel="canonical" href="http://java-questions.com/keywords-in-java.html"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="List of common keywords used in java: throw, throws, static, final, private, access modifiers, volatile keyword"/>
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <link href="css/prism.css" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async defer></script>
-<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<script src="js/prism.js" async="async"></script></head>
 <body>
 <nav class="navbar navbar-inverse">
 <div class="container-fluid"><div class="navbar-header">
@@ -78,18 +78,14 @@
 <li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
 </ul></div>
 <div class="col-sm-6 col-md-6">
-<h1>Keywords in java</h1> 
-          
+<h1>Java Keywords</h1>           
 <div><p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
 style="display:inline-block;width:468px;height:15px"
 data-ad-client="ca-pub-4267874373737812"
-data-ad-slot="7865597617"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script></p>
-<div id=""><p><strong>Q1) What are different  types of access modifiers in Java?</strong></p>
-<p> Ans) There are  four different types of modifiers:</p>
+data-ad-slot="7865597617"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></p>
+<div id=""><p><strong>Q1)What are different types of access modifiers in Java?</strong></p>
+<p>Ans)There are four different types of modifiers:</p>
 <table class="table">
 <tr><td><p align="center">Modifer</p></td>
 <td><p align="center">Accessible in the same package</p></td>
@@ -107,15 +103,12 @@ data-ad-slot="7865597617"></ins>
 <td><p align="center">Yes</p></td>
 <td><p align="center">Yes</p></td></tr></table></div>
 <div id=""><p><strong>Q2) What is the use of final keyword?</strong></p>
-<p>Ans) The final keyword can be assigned to </p>
-<ol><li>Class level variable</li>
-<li>method</li>
-<li>class</li>
-<li>Objects</li></ol>
+<p>Ans)The final keyword can be assigned to:</p>
+<ol><li>Class level variable</li><li>method</li><li>class</li><li>Objects</li></ol>
 <p> If a final is assigned to a variable, the  variable behaves as a constant. It means that value of the variable once set cannot be  changed.</p>
 <pre><code class="language-java">final int i = 1;
 i = 5; // error</code></pre>
-<p>If a  final is assigned to a method then it cannot be  overridden in its child class.</p>
+<p>If a final is assigned to a method then it cannot be  overridden in its child class.</p>
 <pre><code class="language-java">class Parent {
   final void print() {
     System.out.println("Inside");
@@ -128,7 +121,7 @@ class Child extends Parent {
     System.out.println("Inside");
   }
 } </code></pre>
-<p>If a class is made as final, then no other class can extend it and make it as parent class. E.g. String Class.</p><p>Final  objects are instantiated only once. i.e </p>
+<p>If a class is made as final, then no other class can extend it and make it as parent class. E.g. String Class cannot be extended.</p><p>Final objects are instantiated only once. i.e </p>
 <pre><code class="language-java">final Map map = new HashMap();
 map.put("key";,"value");
 map = new HashMap(); // error</code></pre></div>
@@ -138,8 +131,8 @@ style="display:inline-block;width:300px;height:250px"
 data-ad-client="ca-pub-4267874373737812"
 data-ad-slot="6388864415"></ins><script>
 (adsbygoogle = window.adsbygoogle || []).push({});</script></div>
-<div id=""><p><strong>Q3) What is the use of synchronized keyword?</strong></p>
-<p>Ans) This keyword is used to prevent concurrency. Synchronized keyword  can be applied to static/non-static methods or a block of code. Only one thread  at a time can access synchronized methods and if there are multiple threads trying  to access the same method then other threads have to wait for the execution of method  by one thread. Synchronized keyword  provides a lock on the object and thus prevents race condition. E.g.</p>
+<div id=""><p><strong>Q3)What is the use of synchronized keyword?</strong></p>
+<p>Ans)This keyword is used to prevent concurrency. Synchronized keyword can be applied to static/non-static methods or a block of code. Only one thread at a time can access synchronized methods and if there are multiple threads trying to access the same method then other threads have to wait for the execution of method by one thread. Synchronized keyword  provides a lock on the object and thus prevents race condition. E.g.</p>
 <pre><code class="language-java">public void synchronized simpleMethod() {}
   public void synchronized staticMethod() {}
   public void myMethod() {
@@ -147,15 +140,14 @@ data-ad-slot="6388864415"></ins><script>
     }
   }</code></pre> 
 </div>
-<div id=""><p><strong>Q4) What is a volatile keyword?</strong></p>
-<p>Ans) In general each thread has its own copy of a variable, such that one thread is not concerned with the value of the same variable in the other thread. But sometimes this may not be the case. Consider a scenario in which the count variable is holding the number of times a method is called for a given class irrespective of any thread calling, in this case, irrespective of thread access the count has to be increased and value needs to be consistent across all the threads. In this case the count variable is declared as volatile.
-The copy of a volatile variable is stored in the main memory, so every time a thread access the variable even for reading purpose the local copy is updated each time from the main memory. The volatile variable may have performance issues.</p>
-</div>
-<div id=""><p><strong>Q5) What is a transient variable?</strong></p>
-<p>Ans) If some of the properties of a class are not required to be serialized then the variables are marked as transient. When an object is deserialized the transient variables retains the default value depending on the data type of variable and will loose its original value.</p></div>
-<div id=""><p><strong>Q6) What is a strictfp modifier?</strong></p>
-<p>Ans) Only variables can be marked as <b>strictfp</b>. It is used to restrict floating point calculations ( fp ) to ensure portability ( platform Independent ). When this modifier is specified, the JVM adheres to the Java specifications ( IEEE-754 floating-point specification ) and returns the consistent value independent of the platform. That is, if you want the answers from your code (which uses floating point values) to be consistent across all then platforms, then you need to specify the strictfp modifier.</p></div>
-<div id=""><p><strong>Q7) What is a static variable?</strong></p>
+<div id=""><p><strong>Q4)What is a volatile keyword?</strong></p>
+<p>Ans)In general each thread has its own copy of a variable, such that one thread is not concerned with the value of the same variable in the other thread. But sometimes this may not be the case. Consider a scenario in which the count variable is holding the number of times a method is called for a given class irrespective of any thread calling, in this case, irrespective of thread access the count has to be increased and value needs to be consistent across all the threads. In this case the count variable is declared as volatile.</p>
+<p>The copy of a volatile variable is stored in the main memory, so every time a thread access the variable even for reading purpose the local copy is updated each time from the main memory. The volatile variable may have performance issues.</p></div>
+<div id=""><p><strong>Q5)What is a transient variable?</strong></p>
+<p>Ans)If some of the properties of a class are not required to be serialized then the variables are marked as transient. When an object is deserialized the transient variables retains the default value depending on the data type of variable and will loose its original value.</p></div>
+<div id=""><p><strong>Q6)What is a strictfp modifier?</strong></p>
+<p>Ans)Only variables can be marked as <b>strictfp</b>. It is used to restrict floating point calculations ( fp ) to ensure portability ( platform Independent ). When this modifier is specified, the JVM adheres to the Java specifications ( IEEE-754 floating-point specification ) and returns the consistent value independent of the platform. That is, if you want the answers from your code (which uses floating point values) to be consistent across all then platforms, then you need to specify the strictfp modifier.</p></div>
+<div id=""><p><strong>Q7)What is a static variable?</strong></p>
 <p>Ans) Static keyword can be used with the variables and methods but not with the class. Anything declared as static is related to class and not objects.</p>
 <p><strong>Static variable</strong>: Multiples objects of a class shares the same instance of a static variable.Consider the example:</p>
 <pre><code class="language-java">public class Counter {
@@ -194,8 +186,7 @@ NonStatic count for Obj2: 1</code></pre>
 <p>In the above program obj1 and obj2 share the same instance of static variable count hence if the value is incremented by one object , the incremented value will be reflected for obj1 and obj2.</p>
 </div>  
 <div id="#java-static-keyword"><p><strong>Q8) What is a static method?</strong></p>
-<p>Ans) A static method can be accessed without creating the objects. Just by using the Class name the method can be accessed.</p>
-<p> Static method can only access static variables and not local or global non-static variables. For eg:</p>
+<p>Ans) A static method can be accessed without creating the objects. Just by using the Class name the method can be accessed.</p><p>Static method can only access static variables and not local or global non-static variables. For eg:</p>
 <pre><code class="language-java">public class Test{
  public static void printMe() {
   System.out.println("Hello World");
@@ -214,11 +205,9 @@ Hello World</code></pre>
 <div id=""><p><strong>Q9) Why static methods cannot access non static variables or methods?</strong></p>
 <p>Ans) A static method cannot access non static variables or methods because static methods can be accessed without instantiating the class, so if the class is not instantiated the variables are not intialized and thus cannot be accessed from a static method.
 </p></div>
-<div id="#java-static-class"><p><strong>Q10) What is a static class ?</strong></p>
-<p>Ans) A class cannot be declared static except inner class. But a class can be said a static class if all the variables and methods of the class are static and the constructor is private. Making the constructor private will prevent the class to be
-instantiated. So the only possibility to access is using Class name only</p></div>
-<div id="#java-throw-keyword">
-<p><strong>Q9) How is throw keyword used?</strong></p>
+<div id="#java-static-class"><p><strong>Q10) What is a static class?</strong></p>
+<p>Ans)A class cannot be declared static except inner class. But a class can be said a static class if all the variables and methods of the class are static and the constructor is private. Making the constructor private will prevent the class to be instantiated. So the only possibility to access is using Class name only</p></div>
+<div id="#java-throw-keyword"><p><strong>Q9)How is throw keyword used?</strong></p>
 <p>Ans) Throw keyword is used to throw the exception manually. It is mainly used when the program fails to satisfy the given condition and it wants to warn the application.The exception thrown should be a subclass of Throwable.</p>
 <pre><code class="language-java">public void parent() {
     try {
@@ -244,17 +233,25 @@ public void child() throws MyCustomException {
   public void child throws MyCustomException {
     //put some logic so that the exception occurs.
   } </code></pre></div>
+<div><p><b>Further Reading</b></p>
+<ol style="list-style-type:none">
+<li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
+<li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li>
+<li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li>
+<li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference between equals and ==?</a></li>
+<li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
+<li><a href="cap-theorem.html">Cap Theorem in Details</a></li>
+<li><a href="java-immutable-class.html">Why is it recommended to use Immutable objects in Java</a></li></ol></div>
 </div>
 <div id="disqus_thread"></div>
-<script type="text/javascript">
+<script>
 var disqus_shortname = 'java-questions';
 (function() {
 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>  
+})();</script>
 </div> <!-- dashboard -->
 <div class="col-sm-3 col-md-4">
 <div style="margin: 5px; float: center;">  

@@ -1,14 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Singleton class in Java</title>
 <meta name="description" content="how to create singleton class in java. When to use singleton class."/>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
-<link rel="canonical" href="https://java-questions.com/java-singleton-class.html"/>
+<link rel="canonical" href="http://java-questions.com/java-singleton-class.html"/>
 <link href="css/prism.css" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script>
-<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<script src="js/prism.js" async="async"></script></head>
 <body>
 <nav class="navbar navbar-inverse">
 <div class="container-fluid"><div class="navbar-header">
@@ -79,32 +79,32 @@
 <li><a href="java-programming-questions-1.html"><b>Programming Q#1</b></a></li>
 <li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
 <li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
-</ul>
-</div>
+</ul></div>
 <div class="col-sm-6 col-md-6">
-<h1>Singleton Class in Java</h1>
-          
+<h1>Singleton Class in Java</h1>          
 <div><p>A singleton is simply a class that is instantiated exactly once in the Java Virtual Machine. It is used to provide global point of access to the object. In terms of practical use Singleton patterns are used in logging, caches, thread pools, configuration settings, device driver objects. The intention is to create a single instance of a object of classes which are expensive to create during runtime and try to reuse the same object. Such objects are mainly immutable.</p>
 <p>Some basics rules required to implement a singleton class</p>
-<ul>
-<li>Constructor should be <b>private</b></li>
+<ul><li>Constructor should be <b>private</b></li>
 <li>Declare a static variable object of the class</li>
-<li>Declare a static method to return the instance</li>
-</ul>
+<li>Declare a static method to return the instance</li></ul>
 <p>There are multiple variations to implement singleton class.</p>
-<ul>
-<li>Early initialization of class variable
+<ul><li>Early initialization of class variable
 <pre><code class="language-java"> public class Singleton {
   private final static Singleton obj = new Singleton() ; //early init
+  
   private Singleton () {}; //private constructor
+  
   public static Singleton getInstance() {
     return obj;
   }
 }</code></pre></li>
 <li>Lazy initialization of class variable
 <pre><code class="language-java"> public class Singleton {
+  
   private static Singleton obj = null ;
+  
   private Singleton () {}; //private constructor
+  
   public static Singleton getInstance() {
     if (null == obj) {
       obj = new Singleton();
@@ -112,12 +112,16 @@
     return obj;
   }
 }</code></pre>
-The above code look resonably correct. It may fail in multithreaded environment, where Thread1 see that obj is null and enters the if loop to create obj and at the same time Thread2 also comes and find obj as null and enters the loop and create another object. This would result in having multiple instances of singleton class. This problem can be solved by <b>Double Locking</b>.
-</li>
-<li> Making above code thread safe by double locking.</li>
+The above code look resonably correct. It may fail in multithreaded environment, where Thread1 see that obj is null and enters the if loop to create obj and at the same time Thread2 also comes and find obj as null and enters the loop and create another object. This would result in having multiple instances of singleton class. This problem can be solved by <b>Double Locking</b>.</li>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4267874373737812" data-ad-slot="3925670280"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<li> Making above code thread safe by <b>double locking</b>.</li>
 <pre><code class="language-java"> public class Singleton {
-private static Singleton obj = null ;
+  
+  private static Singleton obj = null ;
+  
   private Singleton () {}; //private constructor
+  
   public static Singleton getInstance() {
     if (null == obj) {
       synchronized(Singleton.class) {
@@ -129,15 +133,24 @@ private static Singleton obj = null ;
     return obj;
   }
 }</code></pre>
-Lets see what happening in above code. In the above code snippet imagine that multiple threads comes concurrently and tries to create the new instance. In such situation there may be three or more threads are waiting on the synchronized block to get access. Since we have used synchronized only one thread will be given access. All the remaining threads which were waiting on the synchronized block will be given access when first thread exits this block. However when the remaining concurrent thread enters the synchronized block they are prevented to enter further due to the double check : null check. Since the first thread has already created an instance no other thread will enter this loop.
-</ul>
+<p>Lets see what happening in above code. In the above code snippet imagine that multiple threads comes concurrently and tries to create the new instance. In such situation there may be three or more threads are waiting on the synchronized block to get access. Since we have used synchronized only one thread will be given access. All the remaining threads which were waiting on the synchronized block will be given access when first thread exits this block. However when the remaining concurrent thread enters the synchronized block they are prevented to enter further due to the double check : null check. Since the first thread has already created an instance no other thread will enter this loop.</p>
 <li>With JDK 1.5 enum (preferred approach). Since Enum is thread safe, its become simplest to implement.
 <pre><code class="language-java"> public enum Singleton {
  INSTANCE;
-}
-</code></pre></li>
+}</code></pre></li></ul>
+<div><p><b>Recommend Reading</b></p>
+<ol style="list-style-type:none">
+<li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
+<li><a href="java-hashcode-and-equals.html">Use of hashcode and equals</a></li>
+<li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li>
+<li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference between equals and ==?</a></li>
+<li><a href="data-structures-in-details.html">Data structures</a></li>
+<li><a href="cap-theorem.html">Cap Theorem in Details</a></li>
+<li><a href="java-immutable-class.html">Why is it recommended to use Immutable objects in Java</a></li>
+<li><a href="java-articles.html">Complete list of Java articles</a></li></ol></div>
 <div id="disqus_thread"></div>
-<script type="text/javascript">
+<script>
 var disqus_shortname = 'java-questions';
 (function() {
 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -147,18 +160,10 @@ dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
-<div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- new-middle -->
-<ins class="adsbygoogle"
+<div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle"
 style="display:inline-block;width:300px;height:250px"
 data-ad-client="ca-pub-4267874373737812"
-data-ad-slot="6388864415"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>   
-</div> <!-- dashboard -->
+data-ad-slot="6388864415"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div>
 <div class="col-sm-3 col-md-4">
 <div class="fb-like-box" data-href="https://www.facebook.com/InterviewQuestionsForProgrammers" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
 <div style="margin: 5px; float: center;">  
@@ -168,9 +173,7 @@ data-ad-slot="6388864415"></ins>
 style="display:inline-block;width:300px;height:600px"
 data-ad-client="ca-pub-4267874373737812"
 data-ad-slot="3435398011"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- new-righttop2 -->

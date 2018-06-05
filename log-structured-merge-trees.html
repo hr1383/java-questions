@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Log Structured merge trees</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Log Storage and log structured merge tree are used heavily to persist data in DB and for higher throughput systems"/>
-<link rel="canonical" href="https://java-questions.com/log-structured-merge-tree.html"/>
+<link rel="canonical" href="http://java-questions.com/log-structured-merge-tree.html"/>
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <link href="css/prism.css" rel="stylesheet"/><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async defer></script>
-<script type="text/javascript" src="js/prism.js" async="async"></script></head><body><nav class="navbar navbar-inverse">
+<script src="js/prism.js" async="async"></script></head><body><nav class="navbar navbar-inverse">
 <div class="container-fluid"><div class="navbar-header">
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 <span class="sr-only">Toggle navigation</span>
@@ -73,9 +73,7 @@
 </ul></div>
 <div class="col-sm-6 col-md-6">
 <h1>Log Storage and Log Structured merge trees</h1>
- 
-<div>
-<p>LSM trees are designed to achieve higher throughput and are used as the storage engine of various DB such as HBase, Cassandra, LevelDB, SQLite. As the name suggests, writes are made to log files in append-only mode. These logs files are merged and compacted in the background and indexed for efficient search.</p>
+<div><p>LSM trees are designed to achieve higher throughput and are used as the storage engine of various DB such as HBase, Cassandra, LevelDB, SQLite. As the name suggests, writes are made to log files in append-only mode. These logs files are merged and compacted in the background and indexed for efficient search.</p>
 <p>To discuss how LSTM work's let's understand few basics:</p>
 <ol><li>Log storage</li>
 <li>Segment</li>
@@ -112,7 +110,7 @@ data-ad-slot="6388864415"></ins>
 <li>An advantage of B-trees is that each key exists in exactly one place in the index whereas a log-structured storage engine may have multiple copies of the same key in different segments.</li></ol>
 </div>
 <div id="disqus_thread"></div>
-<script type="text/javascript">
+<script>
 var disqus_shortname = 'java-questions';
 (function() {
 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -133,7 +131,6 @@ data-ad-slot="3435398011"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- new-righttop2 -->
 <ins class="adsbygoogle"
 style="display:inline-block;width:300px;height:600px"
 data-ad-client="ca-pub-4267874373737812"

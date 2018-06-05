@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Java Exception Interview questions</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 <link rel="canonical" href="http://java-questions.com/Exceptions-interview-questions.html"/>
 <meta name="description" content=" List of most frequent Java exception interview questions."/>
 <meta name="keywords" content="java exception interview questions, java exceptions, Exception hierarchy in java, exception class in java, exception java questions, difference between error and Exception"/>
@@ -9,7 +9,7 @@
 <link href="css/prism.css" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script>
-<script type="text/javascript" src="js/prism.js" async="async"></script></head><body>
+<script src="js/prism.js" async="async"></script></head><body>
 <nav class="navbar navbar-inverse">
 <div class="container-fluid"><div class="navbar-header">
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -82,44 +82,37 @@
 <li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li>
 </ul></div>
 <div class="col-sm-6 col-md-6">
-<h1>Top Java Exception Interview Questions</h1>      
-<div id=""><p><strong>Q1) What is an Exception?</strong></p>
+<h1>Top Exception Interview Questions</h1>      
+<div><p><strong>Q1) What is an Exception?</strong></p>
 <p> Ans) The exception is said to be thrown whenever an exceptional event occurs in java which signals that something is not correct with the code written and may give unexpected result. An exceptional event is an occurrence of a condition which alters the normal program flow. Exceptional handler is the code that does something about the exception.</p>
 </div>
-<div id=""><p><strong>Q2) Exceptions are defined in which java package?</strong></p>
-<p>Ans) All the exceptions are subclasses of java.lang.Exception</p>
-</div>
-<div id=""><p><strong>Q3) How are the exceptions handled in java?</strong>
+<div id="#exception-hierarchy-java"><strong>Q2) Explain the exception hierarchy in java.</strong>
+<p>Ans) The hierarchy is as follows: </p>
+<p><img src="/img/ExceptionClasses.png" alt="java exception hierarchy" width="" height=""/> </p>
+<p>Throwable is a parent class of all Exception classes. There are two types of Exceptions: <strong>Checked exceptions</strong> and <strong>UncheckedExceptions or RunTimeExceptions</strong>. Both types of exception extends Exception class.</p></div>
+<div><p><strong>Q) How are the exceptions handled in java?</strong>
 <p> Ans) When an exception occurs the execution of the program is transferred to an appropriate exception handler. The <b>try-catch-finally</b> block is used to handle the exception.</p>
 <p>The code in which the  exception may occur is enclosed in a try block, also called as a guarded region.</p>
 <p>The <b>catch clause</b> matches a specific exception to a block of code which handles that exception.<br/>
 <p>And the cleanup code which needs to be executed no matter the exception occurs or not is put inside the <b>finally block</b></p>
 </div>
-<div id="#exception-hierarchy-java"><strong>Q4) Explain the exception hierarchy in java.</strong>
-<p>Ans) The hierarchy is as follows: </p>
-<p><img src="/img/ExceptionClasses.png" alt="java exception hierarchy" width="" height=""/> </p>
-<p>Throwable is a parent class of all Exception classes. There are two types of Exceptions: <strong>Checked exceptions</strong> and <strong>UncheckedExceptions or RunTimeExceptions</strong>. Both types of exception extends Exception class.</p></div>
-<div id=""><p><strong>Q5) What is Runtime Exception or unchecked exception?</strong></p>
+<div><p><strong>Q) What is Runtime Exception or unchecked exception?</strong></p>
 <p>Ans) Runtime exceptions represent problems that are the result of a programming problem. Such problems include arithmetic exceptions, such as  dividing by zero; pointer exceptions: such as trying to access an object  through a null reference; and indexing exceptions: such as attempting to access  an array element through an index that is too large or too small. </p>
 <p>Runtime exceptions need not be explicitly caught in try catch block as it can occur anywhere in a program, and in a typical one they can be very numerous. Having to add runtime exceptions in every method declaration would reduce a program's clarity. Thus, the compiler does not require that you catch or specify runtime  exceptions (although you can). The solution to rectify is to correct the  programming logic where the exception has occurred or provide a check.</p></div>
-<div id=""><p><strong>Q6) What is checked exception?</strong></p>
+<div><p><strong>Q6) What is checked exception?</strong></p>
 <p>Ans) Checked exception are the exceptions which force the programmer to catch them explicitly in try-catch block. It is a subClass of Exception. Example: IOException.</p></div>
 <p><strong> Q7) What is the difference between Error and Exception?</strong></p>
 <div><p>Ans) An error is an  irrecoverable condition occurring at runtime. Such as OutOfMemory error. These JVM errors you can not repair them at runtime, the execution of application will come to a halt and is not recoverable.</p>
 <p>While  exceptions are conditions that occur because of bad input or human error etc. e.g.  FileNotFoundException will be thrown if the specified file does not  exist. Or a NullPointerException will take place if you try using a  null reference. In most of the cases it is possible to recover from an  exception (probably by giving user a feedback for entering proper values etc.)</p></div>
-<div id=""><p><strong>Q8) What is the difference between ClassNotFoundException and NoClassDefFoundError?</strong></p>
+<div><p><strong>Q8) What is the difference between ClassNotFoundException and NoClassDefFoundError?</strong></p>
 <p>Ans) A ClassNotFoundException is thrown when the reported class is not found by the ClassLoader in the CLASSPATH. It could also mean that the class in question is trying to be loaded from another class which was loaded in a parent classloader and hence the class from the child classloader is not visible.</p>
 <p> Consider if NoClassDefFoundError occurs which is something like</p>
 <p> java.lang.NoClassDefFoundError</p>
 <p> src/com/TestClass </p>
 <p>does not mean that the TestClass class is not in the CLASSPATH. It means that the class TestClass was found by the ClassLoader but when trying to load the class, it ran into an error reading the class definition. This typically happens when the class in question has static blocks or members which use a Class that's not found by the ClassLoader. So to find the culprit, view the source of the class in question (TestClass in this case) and look for code using static blocks or static members. </p></div>
 <div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-style="display:inline-block;width:300px;height:250px"
-data-ad-client="ca-pub-4267874373737812"
-data-ad-slot="6388864415"></ins>
-<script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
-<div id="">
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4267874373737812" data-ad-slot="7600236816"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<div>
 <p><strong>Q9) What is throw keyword?</strong></p>
 <p>Ans) Throw keyword is used to throw the exception manually. It is mainly used when the program fails to satisfy the given condition and it wants to warn the application.The exception thrown should be subclass of Throwable.
       <pre><code class="language-java">public void parent(){
@@ -134,7 +127,7 @@ data-ad-slot="6388864415"></ins>
     }
   }</code></pre>  
   </p></div>      
-<div id="">
+<div>
 <p><strong>Q10) What is use of throws keyword?</strong></p>
 <p> Ans) If the function is not capable of handling the exception then it can ask the calling method to handle it by simply putting the <strong>throws clause</strong> at the function declaration.</p>
 <pre><code class="language-java">public void parent(){
@@ -146,7 +139,7 @@ data-ad-slot="6388864415"></ins>
       //put some logic so that the exception occurs.
   }</code></pre>
 </div>    
-<div id="">
+<div>
 <p><strong>Q11) What are the possible combination to write try, catch  finally block?</strong> </p>
 Ans)
 <pre><code class="language-java">1 try{
@@ -162,28 +155,28 @@ Ans)
     //lines of code to handle the exception thrown in try block
   }</code></pre>
 <p>The  catch blocks must always follow the try block. If there are more than one catch blocks they all must follow each other without any block in between.  The finally block must follow the catch block if one is present or if the catch block is absent the finally block must follow the try block.</p></div>
-<div id="">
+<div>
 <p><strong>Q12) How to create custom Exception?</strong></p>
 <p>Ans) To create you own exception extend the Exception class or any of its subclasses.
 <ul><li>class New1Exception extends Exception { } // this will create Checked Exception </li>
 <li>class NewException extends IOExcpetion { } // this will create Checked exception</li>
 <li>class NewException extends NullPonterExcpetion { } // this will create UnChecked exception</li>
 </ul></div>
-<div id="">
+<div>
 <p><b>Q13) When to make a custom checked Exception or unchecked Exception?</b></p>
 <p>Ans) Checked excepton forces to handle the exception using a try-catch block, unchecked exception doesn't allow explicit handle of exception.</p>
 </div>
-<div id="">
+<div>
 <p><strong>Q14)What is StackOverflowError?</strong></p>
 <p>Ans) The StackOverFlowError is an Error Object thorwn by the Runtime System  when it Encounters that your application/code has ran out of the memory. It may occur in case of recursive methods or a large amount of data is fetched from the server and stored in some object. This error is generated by JVM.</p>
 </div>
-<div id="">
+<div>
 <p><strong>Q15) Why did the designers decide to force a method to specify all uncaught checked exceptions that can be thrown within its scope?</strong></p>
 <p> Ans) Any Exception that can be thrown by a method is part of the method's public programming interface. Those who call a method must know about the exceptions that a method can throw so that they can decide what to do about them. These exceptions are as much a part of that method's programming interface as its parameters and return value.</p>
 </div>
 <p><a href="Exceptions-interview-questions_1.html"><p>More Questions on Exceptions >></a></p>
 <div id="disqus_thread"></div>
-<script type="text/javascript">
+<script>
 var disqus_shortname = 'java-questions';
 (function() {
 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -237,9 +230,7 @@ ga('send', 'pageview');
 <li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference betwen equals and ==?</a></li>
 <li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
 <li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li>
-<li><a href="java-immutable-class.html">Why is it recommended to ues Immutable objects in Java</a></li>
-</ul>
-<p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
+<li><a href="java-immutable-class.html">Why is it recommended to ues Immutable objects in Java</a></li></ul><p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
 </div>
 <div class="col-md-5 animated fadeInRight">
 <h3>Subscribe to get latest updates.</h3>
@@ -248,6 +239,5 @@ ga('send', 'pageview');
 <div class="mc-field-group">
 <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);">
-</div>
-<div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div>
+</div><div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div>
 </form></div></p></div></div></footer></body></html>

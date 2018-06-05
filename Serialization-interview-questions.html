@@ -1,8 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Java Serialization interview questions | Java interview questions</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
-<link rel="alternate" href="http://java-questions.com" hreflang="en-us"/>
-<link rel="canonical" href="https://java-questions.com/Serialization-interview-questions.html"/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<link rel="canonical" href="http://java-questions.com/Serialization-interview-questions.html"/>
 <meta name="keywords" content="java interview questions, core java interview questions,what is serialization, serializable object, transient variable,what is serialversionuid"/>
 <meta name="description" content="collection of java serialization questions."/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +9,7 @@
 <link href="css/prism.css" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script>
-<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<script src="js/prism.js" async="async"></script></head>
 <body>
 <nav class="navbar navbar-inverse">
 <div class="container-fluid"><div class="navbar-header">
@@ -288,10 +287,20 @@ public class SubSerialSuperNotSerial {
   Result  on executing above code &ndash;
   Before : - 8 blue 
   After :- 4 blue</code></pre>       
-<p>The instance variable &lsquo;noOfWheels&rsquo; is inherited from superclass which is  not serializable. Therefore while restoring it the non-serializable superclass  constructor runs and its value is set to 8 and is not same as the value saved  during serialization which is 4.</p>
+<p>The instance variable &lsquo;noOfWheels&rsquo; is inherited from superclass which is  not serializable. Therefore while restoring it the non-serializable superclass  constructor runs and its value is set to 8 and is not same as the value saved  during serialization which is 4.</p></div>
+<div><p><b>Recommend Reading</b></p>
+<ol style="list-style-type:none">
+<li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
+<li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li>
+<li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li>
+<li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference between equals and ==?</a></li>
+<li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
+<li><a href="cap-theorem.html">Cap Theorem in Details</a></li>
+<li><a href="java-immutable-class.html">Why is it recommended to use Immutable objects in Java</a></li></ol></div>
 </div>
 <div id="disqus_thread"></div>
-<script type="text/javascript">
+<script>
 var disqus_shortname = 'java-questions';
 (function() {
 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

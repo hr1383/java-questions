@@ -2,13 +2,13 @@
 <html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Final, finally and finalize in Java</title>
 <meta name="description" content="Difference between final, finally and finalize in java. How to use final finally and finalize in java"/>
 <link rel="canonical" href="http://java-questions.com/difference-between-final-finally-and-finalize.html"/>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <link href="css/prism.css" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async defer></script>
-<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<script src="js/prism.js" async="async"></script></head>
 <body>
 <nav class="navbar navbar-inverse">
 <div class="container-fluid"><div class="navbar-header">
@@ -128,7 +128,7 @@ public class Test {
 }</code></pre></p>
 <p><b>finalize()</b> - This is the method of Object class.It is invoked before an object is discarded by the garbage collector, allowing it to clean up its state. Should not be used to release non-memory resources like file handles, sockets, database connections etc because Java has only a finite number of these resources and you do not know when the garbage collection is going to kick in to release these non-memory resources through the finalize() method.</p>
 <div id="disqus_thread"></div>
-<script type="text/javascript">
+<script>
 var disqus_shortname = 'java-questions';
 (function() {
 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -170,18 +170,14 @@ ga('send', 'pageview');</script>
 <div class="row">
 <h4>Recommend Reading</h4>
 <div class="col-md-6">
-<ul class="pages">
-<li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
+<ul class="pages"><li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
 <li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li>
 <li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li>
 <li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
 <li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference betwen equals and ==?</a></li>
 <li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
 <li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li>
-<li><a href="java-immutable-class.html">Why is it recommended to ues Immutable objects in Java</a></li>
-</ul>
-<p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
-</div>
+<li><a href="java-immutable-class.html">Why is it recommended to ues Immutable objects in Java</a></li></ul><p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p></div>
 <div class="col-md-5 animated fadeInRight">
 <h3>Subscribe to get latest updates.</h3>
 <form action="//java-questions.us5.list-manage.com/subscribe/post?u=eef8f08d0222ba841685ce4e2&amp;id=3670638f6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -189,6 +185,5 @@ ga('send', 'pageview');</script>
 <div class="mc-field-group">
 <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);">
-</div>
-<div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div>
+</div><div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div>
 </form></div></p></div></div></footer></body></html>

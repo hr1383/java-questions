@@ -1,18 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>OOPs concept with java</title>
+<!DOCTYPE html lang="en">
+<html><head><title>OOPs concept with java</title>
 <meta name="keywords" content="oops concept in java, oops interview questions, java polymorphism,inheritance in java, oops in java"/>
-<meta name="description" content="OOPs concepts explained with examples in java. OOPs interview questions on inheritance, polymorphism, composition."/>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta name="description" content="OOPs(Object Oriented Programming) concepts explained with examples in java. OOPs topics such as inheritance, polymorphism, compositionm abstraction are explained."/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 <link rel="alternate" href="http://java-questions.com" hreflang="en-us"/>
-<link rel="canonical" href="https://java-questions.com/oops-interview-questions.html"/>
+<link rel="canonical" href="http://java-questions.com/oops-interview-questions.html"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
-<!-- <script type="text/javascript" src="js/prism.js" async></script> -->
 <link href="css/prism.css" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script>
-<!-- <script src="http://apis.google.com/js/platform.js" async></script> -->
-<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<script src="js/prism.js" async="async"></script></head>
 <body><nav class="navbar navbar-inverse">
 <div class="container-fluid"><div class="navbar-header">
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -85,8 +83,15 @@
 <div class="col-sm-6 col-md-6">
 <h1>OOPS concept interview questions</h1> 
 <p><b>PS: If you like the page or have any questions, feel free to comment at end of the page.</b></p>
+<p><b>OOPs</b> stands for <b>Object Oriented Programming</b>. OOPs is a <b>programming paradigm</b> formulated around <code>Objects</code> which can hold attributes defining it behavior. The data of the objects can be modified by the methods. Concepts of <b>OOPS</b> include <a href="#abstraction">Abstraction</a>, <a href="#polymorphism-java">Polymorphism</a>, <a href="#inheritance-in-java">Inheritance</a>, <a href="#encapsulation">Encapsulation</a>.</p>
+<p>The two building blocks of OOPs are <code>Class</code> and <code>Object</code>.</p><p><b>Class:</b> can be defined as a collections of attributes and methods defining the behaviour of an object.</p><p><b>Object:</b> Instance of a class having the values assigned to the properties of the class.Each object is said to be an instance of a particular class. Procedures in object-oriented programming are known as methods; variables are also known as fields, members, attributes, or properties.</p><p>Common terminology used in OOPs</p>
+<ul><li><b>Class variables</b> - belong to the class as a whole; there is only one copy of each one.</li>
+<li><b>Instance variables or attributes</b> - data that belongs to individual objects; every object has its own copy of each one.</li>
+<li><b>Member variables</b> - refers to both the class and instance variables that are defined by a particular class</li>
+<li><b>Class methods</b> - belong to the class as a whole and have access only to class variables and inputs from the procedure call.</li>
+<li><b>Instance methods</b> - belong to individual objects, and have access to instance variables for the specific object they are called on, inputs, and class variables.</li></ul>
 <div id="#oops-concept-java"><p><strong>Q) What are different <b>oops</b> concept in java?</strong></p>
-<p>Ans) OOPs stands for Object Oriented Programming. The concepts in oops are similar to any other programming languages. Basically, it is program agnostic.
+<p>Ans)
 <p><img src="/img/oops_concepts.png" alt="oops concept in java" width="80%"></p>
 The different OOps concepts are :
 <ul><li><a href="#polymorphism-java">Polymorphism</a></li>
@@ -95,11 +100,9 @@ The different OOps concepts are :
 <li><a href="#encapsulation">Encapsulation</a></li>
 <li><a href="#aggregation">Aggreagation</a></li>
 <li><a href="#composition">Composition</a></li>
-<li><a href="#association">Association</a></li></ul>
-</div>
+<li><a href="#association">Association</a></li></ul></div>
 <div id="polymorphism-java"><p><strong>Q1) What is polymorphism?</strong></p>
-<p>Ans) The ability to identify a function to run is called Polymorphism. In java, c++ there are two types of polymorphism: compile time polymorphism (overloading) and runtime polymorphism (overriding).</p>
-<p><strong>Method overriding: </strong> Overriding occurs when a class method in a child class has the same name and signature as a method in the parent class. When you override methods, JVM determines the proper method to call at the  program&rsquo;s run time, not at the compile time.</p>
+<p>Ans) The ability to identify a function to run is called Polymorphism. In java, c++ there are two types of polymorphism: compile time polymorphism (overloading) and runtime polymorphism (overriding).</p><p><strong>Method overriding: </strong> Overriding occurs when a class method in a child class has the same name and signature as a method in the parent class. When you override methods, JVM determines the proper method to call at the  program&rsquo;s run time, not at the compile time.</p>
 <p><strong>Overloading: </strong>Overloading is determined at the compile time. It occurs when several methods have same names with:</p>
 <ul><li>Different method signature and different number or type of parameters. </li>
 <li>Same method signature but the different number of parameters.</li>
@@ -147,34 +150,29 @@ When a child object is created the method <b>printMyName()</b> present in the ch
 </div>
 <div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4267874373737812" data-ad-slot="7600236816"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-<span><p><strong>Q3) What is multiple inheritance and does java support?</strong></p>
+<p><strong>Q3) What is multiple inheritance and does java support?</strong></p>
 <p>Ans) If a child class inherits the property from multiple classes is known as multiple inheritance. Java does not allow to extend multiple classes. The problem with the multiple inheritance is that if multiple parent classes have methods with same name, then at runtime it becomes difficult for the compiler to decide which method to execute from the child class. To overcome this problem java allows to implement multiple Interfaces. The problem is commonly referred as <a href="keyConcepts-interview-questions.html#diamond-problem"> What is Diamond Problem.</a></p>
-</span></div>
+</div>
 <div id="abstraction"><p><strong>Q) What is the difference between polymorphism and inheritance?</strong></p>
-<p>
-<ul><li>Inheritance defines parent-child relationship between two classes, polymorphism takes advantage of that relationship to add dynamic behavior in your code.</li>
+<p><ul><li>Inheritance defines parent-child relationship between two classes, polymorphism takes advantage of that relationship to add dynamic behavior in your code.</li>
 <li>Inheritance encourages code reusability by allowing child class to inherit behavior from the parent class. On the other hand Polymorphism allows child to redefine already defined behaviour inside the parent class. Without Polymorphism it's not possible for a child to execute its own behaviour while represented by a Parent reference variable, but with Polymorphism it can be done.</li>
 <li>Java doesn't allow multiple inheritance of classes, but allows <a href="keyConcepts-interview-questions.html#diamond-problem">multiple inheritance of Interface</a>, which is actually required to implement Polymorphism. For example, a class can be Runnable, Comparator and Serializable at the same time because all three are interfaces. This makes them pass around in code e.g. you can pass an instance of this class to a method which accepts Serializable, or to Collections.sort() which accepts a Comparator.</li>
-<li>Both Polymorphism and Inheritance allow Object oriented programs to evolve. For example, by using Inheritance you can define new user types in an Authentication System and by using Polymorphism you can take advantage of already written authentication code. Since, Inheritance guarantees minimum base class behaviour, a method depending upon super class or super interface can still accept an object of the base class and can authenticate it.</li></ul>
-</div>
+<li>Both Polymorphism and Inheritance allow Object oriented programs to evolve. For example, by using Inheritance you can define new user types in an Authentication System and by using Polymorphism you can take advantage of already written authentication code. Since, Inheritance guarantees minimum base class behaviour, a method depending upon super class or super interface can still accept an object of the base class and can authenticate it.</li></ul></div>
 <div id="abstraction"><p><strong>Q4) What is an abstraction?</strong></p>
 <p>Ans) Abstraction is a way of converting real world objects in terms of class. It's a concept of defining an idea in terms of classes or interface. For example creating a class Vehicle and injecting properties into it. E.g</p>
 <pre><code class="language-java">public class Vehicle {
   public String colour;
   public String model;
-}</code></pre>
-</div>
+}</code></pre></div>
 <div id="encapsulation"><p><strong>Q5) What is Encapsulation?</strong></p>
-<p>Ans) The encapsulation is achieved by combining the methods and attribute into a class. The class acts like a container encapsulating the properties. The users are exposed mainly public methods.The idea behind is to hide how things work and just exposing the requests a user can do.</p>
-</div>
+<p>Ans) The encapsulation is achieved by combining the methods and attribute into a class. The class acts like a container encapsulating the properties. The users are exposed mainly public methods.The idea behind is to hide how things work and just exposing the requests a user can do.</p></div>
 <div id="association"><p><strong>Q6) What is Association?</strong></p>
 <p>Ans) Association is a relationship where all object have their own lifecycle and there is no owner. Let's take an example of Teacher and Student. Multiple students can associate with a single teacher and single student can associate with multiple teachers but there is no ownership between the objects and both have their own lifecycle. Both can create and delete independently.</p></div>
 <div id="aggregation"><p><strong>Q7) What is Aggregation?</strong></p>
 <p>Ans) Aggregation is a specialized form of Association where all objects have their own lifecycle but there is ownership and child object can not belongs to another parent object. Let's take an example of Department and teacher. A single teacher cannot belong to multiple departments, but if we delete the department teacher object will not destroy. We can think about "has-a" relationship.</p>
 </div>
 <div id="composition"><p><strong>Q8) What is Composition?</strong></p>
-<p>Ans) Composition is specialized form of Aggregation and we can call this as a "death" relationship. It is a strong type of Aggregation. Child object does not have their lifecycle and if parent object deletes all child object will also be deleted. Let's take again an example of a relationship between House and rooms. House can contain multiple rooms there is no independent life of room and any room can not belongs to two different house if we delete the house room will automatically delete.</p>
-</div>
+<p>Ans) Composition is specialized form of Aggregation and we can call this as a "death" relationship. It is a strong type of Aggregation. Child object does not have their lifecycle and if parent object deletes all child object will also be deleted. Let's take again an example of a relationship between House and rooms. House can contain multiple rooms there is no independent life of room and any room can not belongs to two different house if we delete the house room will automatically delete.</p></div>
 <div><p><b>Recommend Reading</b></p>
 <ol style="list-style-type:none">
 <li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
@@ -186,26 +184,18 @@ When a child object is created the method <b>printMyName()</b> present in the ch
 <li><a href="cap-theorem.html">Cap Theorem in Details</a></li>
 <li><a href="java-immutable-class.html">Why is it recommended to use Immutable objects in Java</a></li></ol></div>
 <div id="disqus_thread"></div>
-<script type="text/javascript">
+<script>
 var disqus_shortname = 'java-questions';
 (function() {
 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
+})();</script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div> <!-- dashboard -->
 <div class="col-sm-3 col-md-4">
 <div class="sidebar-menu">
-<ul><li><h4><b>Recommended Reading</b></h4></li>
-<li><a href="java-8-lambda-expressions.html">Java 8 Lambda Explained</a></li>
-<li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
-<li><a href="java-hashcode-and-equals.html">When to use hashcode and equals?</a></li>
-<li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li>
-<li><a href="java-singleton-class.html">How to create a Singleton class in Java?</a></li>
-<li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
-<li><a href="cap-theorem.html">Cap Theorem in Details</a></li></ul></div>
+<ul><li><h4><b>Recommended Reading</b></h4></li><li><a href="java-8-lambda-expressions.html">Java 8 Lambda Explained</a></li><li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li><li><a href="java-hashcode-and-equals.html">When to use hashcode and equals?</a></li><li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li><li><a href="java-singleton-class.html">How to create a Singleton class in Java?</a></li><li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li><li><a href="cap-theorem.html">Cap Theorem in Details</a></li></ul></div>
 <div style="margin: 5px; float: center;">  
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
@@ -213,8 +203,7 @@ style="display:inline-block;width:300px;height:600px"
 data-ad-client="ca-pub-4267874373737812"
 data-ad-slot="3435398011"></ins>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-<div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</div><div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
 style="display:inline-block;width:300px;height:600px"
 data-ad-client="ca-pub-4267874373737812"

@@ -1,15 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Use Comparable and Comparator interface in java</title>
 <meta name="keywords" content="comparator vs comparable interface, comparable and comparator in java"/>
-<meta name="description" content="To sort the data elements a class needs to implement Comparator or Comparable interface in java."/>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
-<link rel="canonical" href="https://java-questions.com/java-comparable-comparator.html"/>
+<meta name="description" content="how to use comparator and comparable interface in java"/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<link rel="canonical" href="http://java-questions.com/java-comparable-comparator.html"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <link href="css/prism.css" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async defer></script>
-<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<script src="js/prism.js" async="async"></script></head>
 <body>
 <<nav class="navbar navbar-inverse">
 <div class="container-fluid"><div class="navbar-header">
@@ -85,9 +85,8 @@
 </ul></div>
 <div class="col-sm-6 col-md-6">
 <h1>Java Comparable and comparator Interface</h1>
-
 <div><p>In java the element in collections can be sorted by using TreeSet or TreeMap.
-To sort the data elements a class needs to implement Comparator or Comparable interface. Thats why all Wrapper classes like Integer,Double and String class implements Comparable interface.</p>
+To sort the data elements a class needs to implement <b>Comparator</b> or <b>Comparable</b>interface. Thats why all Wrapper classes such as Integer, Double and String class implements Comparable interface.</p>
 <p> A class implementing <strong>Comparable</strong> interface need to override <strong>compareTo</strong>(Object obj) method and put the logic for sorting.</p>
 <pre><code class="language-java">The method returns an int value :-1,0,1
 It will return -1 : If this object is lesser than the passed object
@@ -158,16 +157,12 @@ public static void main(String arg[]){
 Output is :
 My name is Andy
 My name is Harish
-My name is Robert
-</code></pre>
+My name is Robert</code></pre>
 <p>Couple of things which needs to be taken in consideration:
 <ul><li> Collections.sort() will sort only the collection having objects which implements either one of the comparing interface.</li><li>Collections.sort() will sort the same list.</li>
 </ul></p>
-<div><span class="pull-right"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-style="display:inline-block;width:300px;height:250px"
-data-ad-client="ca-pub-4267874373737812"
-data-ad-slot="6388864415"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></span> 
+<div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4267874373737812" data-ad-slot="7600236816"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 <span><p><strong>Comparator interface</strong> is used when an extra logic is required to sort the objects. One need to override <strong>compare(Object obj1, Object obj2)</strong> method.For example you want the list of Person object to be sorted on the basis of complete name i.e "name lastName" but also on the other hand doesnt want to change the Person class default sorting implementation.
 Comparable interface can also be used when Person class is a jar . First create a Custom Comparator.</p></span></div>
 <pre><code class="language-java">public class MyCustomComparator implements Comparator{
@@ -196,13 +191,21 @@ My name is Robert India
 My name is Robert UK
 My name is Robert USA
 </code></pre>
-<p>
-Couple of things which needs to be taken in consideration:<br/>
+<p>Couple of things which needs to be taken in consideration:<br/>
 1) For Comparator interface you need to override method compare(obj)<br/>
-2) In collections.sort() the instance of Comparator need to be passed. In this example the list is sorted according to the custom Comparator created<br/></p>
-</div>
+2) In collections.sort() the instance of Comparator need to be passed. In this example the list is sorted according to the custom Comparator created<br/></p></div>
+<div><p><b>Recommend Reading</b></p>
+<ol style="list-style-type:none">
+<li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
+<li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li>
+<li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li>
+<li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference between equals and ==?</a></li>
+<li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
+<li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li>
+<li><a href="java-immutable-class.html">Why is it recommended to use Immutable objects in Java</a></li></ol></div>
 <div id="disqus_thread"></div>
-<script type="text/javascript">
+<script>
 var disqus_shortname = 'java-questions';
 (function() {
 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

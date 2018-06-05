@@ -3,13 +3,13 @@
 <meta name="keywords" content="java memory model, garbage collection, jvm"/>
 <meta name="description" content="java memory model description and explaining how garbage collection behaves."/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://java-questions.com/java-memory-model-and-garbage-collections.html"/>
+<link rel="canonical" href="http://java-questions.com/java-memory-model-and-garbage-collections.html"/>
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <link href="css/prism.css" rel="stylesheet"/>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/><link rel="alternate" href="http://java-questions.com" hreflang="en-us" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="alternate" href="http://java-questions.com" hreflang="en-us" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script>
-<script type="text/javascript" src="js/prism.js" async="async"></script></head>
+<script src="js/prism.js" async="async"></script></head>
 <body>
 <nav class="navbar navbar-inverse">
 <div class="container-fluid"><div class="navbar-header">
@@ -132,7 +132,7 @@ CMS collector on young generation uses the same algorithm as that of the paralle
 Garbage First Collector doesn't work like other collectors and there is no concept of Young and Old generation space. It divides the heap space into multiple equal-sized heap regions. When a garbage collection is invoked, it first collects the region with lesser live data, hence "Garbage First". You can find more details about it at <a href="http://docs.oracle.com/javase/7/docs/technotes/guides/vm/G1.html">Garbage-First Collector Oracle Documentation.</a></li>
 </ul></div>
 <div id="disqus_thread"></div>
-<script type="text/javascript">
+<script>
 var disqus_shortname = 'java-questions';
 (function() {
 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

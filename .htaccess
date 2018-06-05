@@ -1,7 +1,6 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^java-questions\.com [NC]
-RewriteCond %{SERVER_PORT} 80 
-RewriteRule ^(.*)$ https://java-questions.com/$1 [L,R=301,NC]
+RewriteCond %{HTTP_HOST} ^www.java-questions.com [NC]
+RewriteRule ^(.*)$ http://java-questions.com/$1 [L,R=301,NC]
 
 <IfModule mod_expires.c>
 # Enable expirations

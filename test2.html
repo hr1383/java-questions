@@ -1,0 +1,33 @@
+<h3>Given a positive integer n, find the least number of perfect square numbers which sum to n.</h3>
+<p>For example, if n is 10 then output is <code>2 (9+1)</code></p>
+<p>For example, if n is 13 then output is <code>2 (9+4)</code></p>
+<p>For example, if n is 12 then output is <code>3 (4+4+4)</code></p>
+<p>The problem is similar to coin exchange problem. Here we can start to find minimum number for sum of <code>1</code> and continue till <code>n</code></p>
+<p>For example n = 4</p>
+<code>
+    int dp[] = new int[4]</br>
+    dp[0] = 0. //</br>
+    dp[1] = dp[1- (0*0)] + 1 = 1 //the +1 is having the current number in the list</br>
+    dp[2] = dp[2 - (1*1)] + 1= 1+1 = 2</br>
+    dp[3] = min of ( dp[3 - (1*1)] or dp[3 - (2*2)]) +1 //2*2 is > 3 so will be ignored</br>
+          = min(dp[2]) + 1 = 3</br>
+    dp[4] = min of (dp[4 - (1*1)] or dp[4 - (2*2)] or dp[4-(3*3)]) + 1</br>
+          = min (dp[3], dp[0]) +1 </br>
+          = min(3,0)+1 = 1</br>
+</code>
+<p>The problem can be solved using dynamic programming where we start from calculating sum for 1 and work towards n.</p>
+
+<pre><code class="language-java">public class Solution { 
+ int squares(int n) {
+    int dp[] = new int[n+1];
+    dp[0] = 0
+    for (int i = 1;i&lbps;n;i++) {
+        int j =1;
+        while (i - (j*j) >= 0) {
+            dp[i] = Math.min(dp[i], dp[i-(j*j)]);
+            j++
+        }
+    }
+    return dp[n];
+  }
+}</pre></code>

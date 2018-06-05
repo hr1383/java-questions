@@ -1,14 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Fail Fast vs Fail Safe Iterator in java</title>
 <meta name="description" content="Difference between Fail Fast vs Fail Safe Iterator in java"/>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 <link rel="canonical" href="http://java-questions.com/fail-fast-and-fail-safe-iterators-in-java.html"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <link href="css/prism.css" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async defer></script>
-<script type="text/javascript" src="js/prism.js" async="async"></script></head><body>
+<script src="js/prism.js" async="async"></script></head><body>
 <nav class="navbar navbar-inverse">
 <div class="container-fluid"><div class="navbar-header">
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -83,7 +83,7 @@
 </ul></div>
 <div class="col-sm-6 col-md-6">
 <h1>Types of Iterators: Fail Fast vs Fail Safe</h1>
-<div>Ans) In Java the iterators allow to traverse the collections. Iterator is an interface which has two methods <b>hasNext()</b> and <b>next()</b>. Iterators returned by the Collection are either fail-fast in nature or fail-safe in nature. 
+<div>Ans)In Java the iterators allow to traverse the collections. Iterator is an interface which has two methods <b>hasNext()</b> and <b>next()</b>. Iterators returned by the Collection are either <b>fail-fast</b> in nature or <b>fail-safe</b> in nature. 
 <blockquote>Fail-Fast iterators immediately throw ConcurrentModificationException if a collection is modified while iterating over it.</blockquote>
 <blockquote> Fail-Safe iterators don't throw any exceptions if a collection is modified while iterating over it because it operates on the clone of the collection, not on the actual collection. </blockquote>
 <p><b>Fail-Fast Iterators In Java :</b></p>
@@ -152,8 +152,18 @@ Sunday
 Monday
 Tuesday
 </code></pre>
+<div><p><b>Recommend Reading</b></p>
+<ol style="list-style-type:none">
+<li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
+<li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li>
+<li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li>
+<li><a href="java-singleton-class.html">How to create Singleton class in Java?</a></li>
+<li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference between equals and ==?</a></li>
+<li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
+<li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li>
+<li><a href="java-immutable-class.html">Why is it recommended to use Immutable objects in Java</a></li></ol></div>
 <div id="disqus_thread"></div>
-<script type="text/javascript">
+<script>
 var disqus_shortname = 'java-questions';
 (function() {
 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

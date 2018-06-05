@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr' xmlns:g='http://www.google.com/2005/gml/g'><head><title>Java Collections Interview Questions</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
-<meta name="description" content="List of top 50 questions used for java collections framework interview. These set of interview questions covers detail about HashMap, ArrayList, Set, Data Structure used, performance of collections."/>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<meta name="description" content=" 50 java collections interview questions covering about internals of HashMap, ArrayList, Set, Data Structure used, performance of collections."/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="http://java-questions.com/collections-interview-questions.html"/>
 <link rel="stylesheet" href="css/bootstrap.min.css"/>
 <link href="css/prism.css" rel="stylesheet"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" async></script>
-<script type="text/javascript" src="js/prism.js" async="async"></script></head><body>
+<script src="js/prism.js" async="async"></script></head><body>
 <nav class="navbar navbar-inverse">
 <div class="container-fluid"><div class="navbar-header">
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -80,15 +80,13 @@
 <li><a href="java-programming-questions-2.html"><b>Programming Q#2</b></a></li>
 <li><a href="java-programming-questions-3.html"><b>Programming Q#3</b></a></li></ul>
 </div>
-<div class="col-sm-6 col-md-6">
-<h2>Top Java Collections Questions for interview</h2>
+<div class="col-sm-6 col-md-6"><h2>Top Java Collection Interview Questions</h2>
 <p><b>PS: If you like the page or have any questions, feel free to comment at end of the page.</b></p>
-<div><p><b>Java collections</b> offer some of the most comprehensive suites of built-in Data structures. Often this is the most common topic amongst interviewers. Good foundation and understanding of java collections help developer in building efficient programs.</p></div>
+<div><p><b>Collections in Java</b> offer some of the most comprehensive suites of built-in Data structures. Often this is the most common topic amongst interviewers. Good foundation and understanding of java collections help developer in building efficient programs.</p></div>
 <div id=""><p><strong>Q1) What is the difference between an ArrayList and a vector?</strong></p>
 <p> Ans)<ul><li><b>Synchronization</b> - ArrayList is not thread-safe whereas Vector is thread-safe. In Vector class each method like add(), get(int i) is surrounded with a synchronized block, thus making Vector class thread-safe. </li>
-<li> <b>Data growth</b> - Internally, both the ArrayList and Vector hold onto their contents using an Array. This means that the collection is of fixed size. When the collection is coming to near it's max capacity it dynamically resizes itself. A Vector defaults to doubling the size of its array, while the ArrayList increases its array size by 50 percent.</li>
-<li><b>Performance</b> - Since Vector is thread-safe, the performance is slower than ArrayList.</li></ul></p>
-</div>
+<li><b>Data growth</b> - Internally, both the ArrayList and Vector hold onto their contents using an Array. This means that the collection is of fixed size. When the collection is coming to near it's max capacity it dynamically resizes itself. A Vector defaults to doubling the size of its array, while the ArrayList increases its array size by 50 percent.</li>
+<li><b>Performance</b> - Since Vector is thread-safe, the performance is slower than ArrayList.</li></ul></p></div>
 <div><p><strong>Q2) How can an ArrayList be synchronized without using Vector?</strong></p>
 <p>Ans) Arraylist can be synchronized using: </p>
 <pre><code class="language-java">Collections.synchronizedList(List list)
@@ -100,8 +98,8 @@ Collections.synchronizedCollection(Collection c)</code></pre></div>
 <pre><code class="language-java">class Employee implements Comparable<Employee> {
   private int id;
   private String name;
-  public int compareTo(Employee e1, Employee e2) {
-    return e1.id == e2.id;
+  public int compareTo(Employee e1) {
+    return this.id == e1.id;
   }
 }</code></pre></li>
 <li>Now call Collections.sort() method and pass the list as an argument.</li></ul>
@@ -109,8 +107,8 @@ Collections.synchronizedCollection(Collection c)</code></pre></div>
 <ul><li>Since Comparable interface cannot be implemented, create Comparator and override the compare(Object obj, Object obj1) method.</li>
 <li>Call Collections.sort() on the list and pass comparator as an argument.</li></ul>
 <pre><code class="language-java">class EmployeeComparator implements Comparator<Employee> {
-  public int compare(Employee e) {
-    return this.e == e.id;
+  public int compare(final Employee e1, final Employee e2) {
+    return this.e1.id == e2.id;
   }
 }
 //some class
@@ -118,32 +116,27 @@ List<Employee> employees = new ArrayList();
 //add employee to employees
 //sort the employees
 Collections.sort(employess, new EmployeeComparator());</code></pre></p></div>
-<div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4267874373737812" data-ad-slot="7600236816"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-4267874373737812" data-ad-slot="7600236816"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 <span><strong><p>Q4)What is the difference between HashMap and HashTable? </p></strong>
 <p>Ans) Both collections implements Map. Both collections store value as key-value pairs.
 The key differences between the two are:</p>
 <ol><li>Hashmap is not <b>synchronized</b> in nature but hashtable is(thread-safe). This means that in a multithreaded application, only one thread can get access to a hashtable object and performs an operation on it. Hashmap doesn't guarantee such behavior and is not used in multithreaded environment.</li>
-<li>Hashmap is traversed using an <b>iterator</b>, hashtable can be traversed by <b>enumerator or iterator</b>.</li>
-<li>Iterator in hashmap is <b>fail-fast</b>, enumerator in hashtable is <b>not fail-fast</b></li>
+<li>Hashmap is traversed using an <b>iterator</b>, hashtable can be traversed by <b>enumerator or iterator</b>.</li><li>Iterator in hashmap and hashtable is <a href="fail-fast-and-fail-safe-iterators-in-java.html">fail fast</a> but enumerator in hashtable is<a href="fail-fast-and-fail-safe-iterators-in-java.html">fail safe.</a></li>
 <li>HashMap <b>permits null</b> values and only one null key, while Hashtable <b>doesn't allow</b> key or value as null.</li>
 <li>Since hashtable is synchronized, it is relatively <b>slower in performance</b> than hashmap</li></ol></span></div>
 <div id="#list-in-java"><p><strong>Q5) What are the classes implementing the List interface?</strong></p>
 <p>Ans) There are three implementations of the List interface:
 <ol><li><strong>ArrayList</strong> : It is a resizable array implementation. The size of the ArrayList can be increased dynamically also operations like add, remove and get can be formed once the object is created. It also ensures that the data is retrieved in the manner it was stored. The ArrayList is not thread-safe.</li>
 <li><strong>Vector</strong>: It is the thread-safe implementation of ArrayList. The methods are wrapped around a synchronized block.</li>
-<li><strong>LinkedList</strong>: the LinkedList implements Queue interface too and provide FIFO (First In First Out) which mean than element is always removed from the head of the list and element is added at the end of the list. It is faster than ArrayList for add and remove operation as time complexity is O(1). But for searching or getting an element the average time complexity is O(n) where n is the size of the list.</li>
-</ol></p></div>
+<li><strong>LinkedList</strong>: the LinkedList implements Queue interface too and provide FIFO (First In First Out) which mean than element is always removed from the head of the list and element is added at the end of the list. It is faster than ArrayList for add and remove operation as time complexity is O(1). But for searching or getting an element the average time complexity is O(n) where n is the size of the list.</li></ol></p></div>
 <div id="#set-in-java"><p><strong>Q6) Which all classes implement the Set interface ?</strong></p>
 <p>Ans) A Set is a collection that contains no duplicate elements. More formally, a set contains no pair of elements e1 and e2 such that e1.equals(e2), and at most one null element. <strong>HashSet, SortedSet and TreeSet</strong> are the commonly used class which implements Set interface.</p>
 <ul><li><strong>SortedSet</strong> - It is an interface which extends Set. As the name suggests, the interface allows the data to be iterated in the ascending order or sorted on the basis of Comparator or Comparable interface. All elements inserted into the interface must implement Comparable or Comparator interface.</li>
 <li><strong>TreeSet</strong> - It is the implementation of SortedSet interface. This implementation provides guaranteed log(n) time cost for the basic operations (add, remove and contains). The class is not synchronized. The class uses Red-Black tree data structure.</li>
-<li><strong>HashSet:</strong> This class implements the Set interface, backed by a hash table (actually a HashMap instance). It makes no guarantees as to the iteration order of the set; in particular, it does not guarantee that the order will remain constant over time. This class permits the null element. This class offers constant time performance for the basic operations (add, remove, contains and size), assuming the hash function disperses the elements properly among the buckets</li></ul>
-</div>
+<li><strong>HashSet:</strong> This class implements the Set interface, backed by a hash table (actually a HashMap instance). It makes no guarantees as to the iteration order of the set; in particular, it does not guarantee that the order will remain constant over time. This class permits the null element. This class offers constant time performance for the basic operations (add, remove, contains and size), assuming the hash function disperses the elements properly among the buckets</li></ul></div>
 <div id="#difference-java-list-set"><p><strong>Q7) What is the difference between List and a Set?</strong></p>
 <p><ol><li>A list can contain duplicate values but Set doesn't allow duplicates.</li>
-<li>A list allows retrieval of data to be in same order of insertion but Set doesn't ensures the order in which the elements can be retrieved.(Except HashSet)</li></ol></p>
-</div>
+<li>A list allows retrieval of data to be in same order of insertion but Set doesn't ensures the order in which the elements can be retrieved.(Except HashSet)</li></ol></p></div>
 <div id=""><p><strong>Q8) What is the difference between Arrays and ArrayList ?</strong>
 <p><ul><li>Arrays are created of fix size whereas ArrayList is dynamic in nature and can vary its length. Also the size of an array cannot be incremented or decremented. But ArrayList has the ability to dynamically increase its capacity and insert more elements.</li>
 <li>Once the array is created elements cannot be added or deleted from it. But with ArrayList the elements can be added and deleted at runtime.
@@ -153,18 +146,14 @@ The key differences between the two are:</p>
   list.remove(0) //  will remove the element from the 1st location.</code></pre></li>
 <li>ArrayList is one-dimensional but an array can be multidimensional.
 <pre><code class="language-java">int[][][] intArray= new  int[3][2][1]; // 3 dimensional array</code></pre></li>
-<li>An Array can contain objects of a single data type or class. ArrayList if not used with generic can contain objects of different class types.</li></ul></p>
-</div>
+<li>An Array can contain objects of a single data type or class. ArrayList if not used with generic can contain objects of different class types.</li></ul></p></div>
 <div id="#difference-java-linkedlist-arraylist"><p><strong>Q9) When to use ArrayList or LinkedList ?</strong></p>
 <p><ol><li><b>Insertion:</b> Adding new elements is pretty fast for either type of list. Inserting an element to the start of end of the ArrayList takes O(1). Inserting in middle of an ArrayList is operation of O(n). Inserting an element in Linkedlist takes O(1). </li>
 <li><b>Access:</b> For the ArrayList, getting an element from the index <i>i</i> is faster O(1) because each element has an index and can be accessed directly with an index but for LinkedList lookup time complexity isO(n). It's slow because elements are accessed in an sequential manner and always access starts from the head of the list.</li>
 <li><b>Deletion:</b>Time complexity of deletion in arraylist is O(n). This is because all remaining elements in the underlying array of Object instances must be shifted to the left after each remove operation. Linkedlist has time complexity of O(1) because deletion can be done by updating the pointers of prev and next elements. </li></ol>
 So an ArrayList works best for cases where you're doing random access on the list and a LinkedList works better if you're doing a lot of editing in the middle of the list. </p>
-<p>Source : <a href="http://java.sun.com/developer/TechTips/1999/tt0809.html">Read More - from java.sun </a></p>
-</div>
-<div><a href="collections-interview-questions_1.html"> More java collections questions</a></div>
-<br/>
-<div><p><b>Recommend Reading</b></p>
+<p>Source : <a href="http://java.sun.com/developer/TechTips/1999/tt0809.html">Read More - from java.sun </a></p></div>
+<div><a href="collections-interview-questions_1.html"> More java collections questions</a></div><br/><div><p><b>Recommend Reading</b></p>
 <ol style="list-style-type:none">
 <li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
 <li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li>
@@ -174,7 +163,7 @@ So an ArrayList works best for cases where you're doing random access on the lis
 <li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
 <li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li>
 <li><a href="java-immutable-class.html">Why is it recommended to use Immutable objects in Java</a></li></ol></div>
-<div id="disqus_thread"></div><script type="text/javascript">var disqus_shortname="java-questions";(function(){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src="//"+disqus_shortname+".disqus.com/embed.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)})();</script>
+<div id="disqus_thread"></div><script>var disqus_shortname="java-questions";(function(){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src="//"+disqus_shortname+".disqus.com/embed.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)})();</script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript></div>
 <div class="col-sm-3 col-md-4"><!--sidebar ad-->
 <div class="sidebar-menu">
@@ -190,15 +179,12 @@ So an ArrayList works best for cases where you're doing random access on the lis
 <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-4267874373737812" data-ad-slot="3435398011"></ins>
 <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
 </div>
-<div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-4267874373737812" data-ad-slot="4912131216"></ins>
+<div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-4267874373737812" data-ad-slot="4912131216"></ins>
 <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
 </div></div></div><script>(function(d,e,j,h,f,c,b){d.GoogleAnalyticsObject=f;d[f]=d[f]||function(){(d[f].q=d[f].q||[]).push(arguments)},d[f].l=1*new Date();c=e.createElement(j),b=e.getElementsByTagName(j)[0];c.async=1;c.src=h;b.parentNode.insertBefore(c,b)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-23729980-1","auto");ga("send","pageview");</script>
 <footer style="background-color: #3c3d41;padding: 30px 30px;color: rgba(255,255,255,1.00);margin-bottom: 20px;border-bottom-right-radius: 6px;border-top-left-radius: 0px;border-bottom-left-radius: 6px;">
-<div class="row">
-<h4>Recommend Reading</h4>
-<div class="col-md-6">
-<ul class="pages">
+<div class="row"><h4>Recommend Reading</h4>
+<div class="col-md-6"><ul class="pages">
 <li><a href="java-memory-model-and-garbage-collections.html">How java manages Memory?</a></li>
 <li><a href="java-hashcode-and-equals.html">Why is it advised to use hashcode and equals together?</a></li>
 <li><a href="java-comparable-comparator.html">Comparable and Comparator in java</a></li>
@@ -206,10 +192,7 @@ So an ArrayList works best for cases where you're doing random access on the lis
 <li><a href="difference-between-equals-method-and-equality-operator-java.html">Difference betwen equals and ==?</a></li>
 <li><a href="difference-between-abstract-class-and-interface-java.html">When to use abstract class over interface?</a></li>
 <li><a href="difference-between-final-finally-and-finalize.html">Difference between final, finally and finalize</a></li>
-<li><a href="java-immutable-class.html">Why is it recommended to ues Immutable objects in Java</a></li>
-</ul>
-<p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p>
-</div>
+<li><a href="java-immutable-class.html">Why is it recommended to ues Immutable objects in Java</a></li></ul><p>Copyright 2018 JavaQuestions, All rights reserved | <a href="sitemap.xml">Sitemap</a></p></div>
 <div class="col-md-5 animated fadeInRight">
 <h3>Subscribe to get latest updates.</h3>
 <form action="//java-questions.us5.list-manage.com/subscribe/post?u=eef8f08d0222ba841685ce4e2&amp;id=3670638f6d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -217,6 +200,5 @@ So an ArrayList works best for cases where you're doing random access on the lis
 <div class="mc-field-group">
 <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="color: rgba(0,0,0, 1.0);">
-</div>
-<div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div>
+</div><div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success"/>Subscribe</div></div>
 </form></div></p></div></div></footer></body></html>
